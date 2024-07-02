@@ -6,8 +6,24 @@
 
 ### Week 1
 
-- [ ] [active inference from scratch](https://github.com/infer-actively/pymdp/blob/master/docs/notebooks/active_inference_from_scratch.ipynb)
+#### Practice
+
+- [x] [active inference from scratch](https://github.com/infer-actively/pymdp/blob/master/docs/notebooks/active_inference_from_scratch.ipynb)
 - [x] [T-Maze Demo](https://github.com/infer-actively/pymdp/blob/master/docs/notebooks/tmaze_demo.ipynb)
-- [ ] [Cue Chaining](https://github.com/infer-actively/pymdp/blob/master/docs/notebooks/cue_chaining_demo.ipynb) Notebooks
-- [ ] Place 2 agents into the gridworld and have no interaction except that they cannot occupy the same grid space (cannot be in the same block)
-- [ ] Research and implement a basic RL / AI environments that will allow for specific communication among the agents
+- [x] [Cue Chaining](https://github.com/infer-actively/pymdp/blob/master/docs/notebooks/cue_chaining_demo.ipynb) Notebooks
+
+#### Thoughts on environment
+
+I am finding the foraging to be an interestesting environment. The ideas that are still unclear here and what the dyanmics of the collaboration are going to be.
+
+### Current idea on environemnt
+
+I want to place objets and agents into an evironment and have the objective of each object needs to be moved back to the landing
+
+#### Step by step plan to implement - Phase 1
+
+**ALl of this can be implemented with no learning for now, I just want to define environment and model dynamics**
+
+1. One agent in an environment that is aware that they need to visit a specific block
+2. One agent aware that that they want to pick up an object and return it to the landing block
+3. Multiple objects that all need to be moved back into the block
