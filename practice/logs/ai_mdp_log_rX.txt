@@ -1,0 +1,146 @@
+
+
+-----------------------------------------------------------------
+File opened at 2024-07-31 19:59:05.819210
+Default parameters:
+{'run_id': '_rX', 'device': 'cpu', 'env': 'CartPole-v1', 'n_episodes': 5000, 'n_hidden_trans': 64, 'lr_trans': 0.001, 'n_hidden_pol': 64, 'lr_pol': 0.001, 'n_hidden_val': 64, 'lr_val': 0.0001, 'memory_capacity': 65536, 'batch_size': 64, 'freeze_period': 25, 'Beta': 0.99, 'gamma': 1.0, 'print_timer': 100, 'keep_log': True, 'log_path': 'logs/ai_mdp_log{}.txt', 'log_save_timer': 10, 'save_results': True, 'results_path': 'results/ai_mdp_results{}.npz', 'results_save_timer': 500, 'save_network': True, 'network_save_path': 'networks/ai_mdp_{}net{}.pth', 'network_save_timer': 500, 'load_network': False, 'network_load_path': 'networks/ai_mdp_{}net_rX.pth'}
+Environment is: CartPole-v1
+Training started at 2024-07-31 19:59:05.821852
+Episodes:  100, avg score: 21.69, over last 100: 21.67
+Episodes:  200, avg score: 19.26, over last 100: 16.80
+Episodes:  300, avg score: 20.22, over last 100: 22.14
+Episodes:  400, avg score: 22.66, over last 100: 30.02
+Episodes:  500, avg score: 25.81, over last 100: 38.43
+
+
+-----------------------------------------------------------------
+File opened at 2024-07-31 19:57:41.130312
+Default parameters:
+{'run_id': '_rX', 'device': 'cpu', 'env': 'CartPole-v1', 'n_episodes': 5000, 'n_hidden_trans': 64, 'lr_trans': 0.001, 'n_hidden_pol': 64, 'lr_pol': 0.001, 'n_hidden_val': 64, 'lr_val': 0.0001, 'memory_capacity': 65536, 'batch_size': 64, 'freeze_period': 25, 'Beta': 0.99, 'gamma': 1.0, 'print_timer': 100, 'keep_log': True, 'log_path': 'logs/ai_mdp_log{}.txt', 'log_save_timer': 10, 'save_results': True, 'results_path': 'results/ai_mdp_results{}.npz', 'results_save_timer': 500, 'save_network': True, 'network_save_path': 'networks/ai_mdp_{}net{}.pth', 'network_save_timer': 500, 'load_network': False, 'network_load_path': 'networks/ai_mdp_{}net_rX.pth'}
+Environment is: CartPole-v1
+Training started at 2024-07-31 19:57:41.567348
+
+
+-----------------------------------------------------------------
+File opened at 2024-07-31 19:58:46.603593
+Default parameters:
+{'run_id': '_rX', 'device': 'cpu', 'env': 'CartPole-v1', 'n_episodes': 5000, 'n_hidden_trans': 64, 'lr_trans': 0.001, 'n_hidden_pol': 64, 'lr_pol': 0.001, 'n_hidden_val': 64, 'lr_val': 0.0001, 'memory_capacity': 65536, 'batch_size': 64, 'freeze_period': 25, 'Beta': 0.99, 'gamma': 1.0, 'print_timer': 100, 'keep_log': True, 'log_path': 'logs/ai_mdp_log{}.txt', 'log_save_timer': 10, 'save_results': True, 'results_path': 'results/ai_mdp_results{}.npz', 'results_save_timer': 500, 'save_network': True, 'network_save_path': 'networks/ai_mdp_{}net{}.pth', 'network_save_timer': 500, 'load_network': False, 'network_load_path': 'networks/ai_mdp_{}net_rX.pth'}
+Environment is: CartPole-v1
+Training started at 2024-07-31 19:58:46.606092
+
+
+-----------------------------------------------------------------
+File opened at 2024-07-31 20:00:00.657457
+Default parameters:
+{'run_id': '_rX', 'device': 'cpu', 'env': 'CartPole-v1', 'n_episodes': 5000, 'n_hidden_trans': 64, 'lr_trans': 0.001, 'n_hidden_pol': 64, 'lr_pol': 0.001, 'n_hidden_val': 64, 'lr_val': 0.0001, 'memory_capacity': 65536, 'batch_size': 64, 'freeze_period': 25, 'Beta': 0.99, 'gamma': 1.0, 'print_timer': 100, 'keep_log': True, 'log_path': 'logs/ai_mdp_log{}.txt', 'log_save_timer': 10, 'save_results': True, 'results_path': 'results/ai_mdp_results{}.npz', 'results_save_timer': 500, 'save_network': True, 'network_save_path': 'networks/ai_mdp_{}net{}.pth', 'network_save_timer': 500, 'load_network': False, 'network_load_path': 'networks/ai_mdp_{}net_rX.pth'}
+Environment is: CartPole-v1
+Training started at 2024-07-31 20:00:00.659250
+Episodes:  100, avg score: 17.66, over last 100: 17.71
+Episodes:  200, avg score: 15.76, over last 100: 13.83
+Episodes:  300, avg score: 16.72, over last 100: 18.66
+Episodes:  400, avg score: 16.70, over last 100: 16.65
+Episodes:  500, avg score: 18.94, over last 100: 27.89
+
+
+-----------------------------------------------------------------
+File opened at 2024-07-31 20:00:43.795979
+Default parameters:
+{'run_id': '_rX', 'device': 'cpu', 'env': 'CartPole-v1', 'n_episodes': 5000, 'n_hidden_trans': 64, 'lr_trans': 0.001, 'n_hidden_pol': 64, 'lr_pol': 0.001, 'n_hidden_val': 64, 'lr_val': 0.0001, 'memory_capacity': 65536, 'batch_size': 64, 'freeze_period': 25, 'Beta': 0.99, 'gamma': 1.0, 'print_timer': 100, 'keep_log': True, 'log_path': 'logs/ai_mdp_log{}.txt', 'log_save_timer': 10, 'save_results': True, 'results_path': 'results/ai_mdp_results{}.npz', 'results_save_timer': 500, 'save_network': True, 'network_save_path': 'networks/ai_mdp_{}net{}.pth', 'network_save_timer': 500, 'load_network': False, 'network_load_path': 'networks/ai_mdp_{}net_rX.pth'}
+Environment is: CartPole-v1
+Training started at 2024-07-31 20:00:43.797100
+Episodes:  100, avg score: 18.67, over last 100: 18.71
+Episodes:  200, avg score: 17.34, over last 100: 16.00
+Episodes:  300, avg score: 18.53, over last 100: 20.93
+Episodes:  400, avg score: 19.88, over last 100: 23.92
+Episodes:  500, avg score: 21.77, over last 100: 29.38
+
+
+-----------------------------------------------------------------
+File opened at 2024-07-31 20:01:37.138785
+Default parameters:
+{'run_id': '_rX', 'device': 'cpu', 'env': 'CartPole-v1', 'n_episodes': 5000, 'n_hidden_trans': 64, 'lr_trans': 0.001, 'n_hidden_pol': 64, 'lr_pol': 0.001, 'n_hidden_val': 64, 'lr_val': 0.0001, 'memory_capacity': 65536, 'batch_size': 64, 'freeze_period': 25, 'Beta': 0.99, 'gamma': 1.0, 'print_timer': 100, 'keep_log': True, 'log_path': 'logs/ai_mdp_log{}.txt', 'log_save_timer': 10, 'save_results': True, 'results_path': 'results/ai_mdp_results{}.npz', 'results_save_timer': 500, 'save_network': True, 'network_save_path': 'networks/ai_mdp_{}net{}.pth', 'network_save_timer': 500, 'load_network': False, 'network_load_path': 'networks/ai_mdp_{}net_rX.pth'}
+Environment is: CartPole-v1
+Training started at 2024-07-31 20:01:37.139775
+Episodes:  100, avg score: 19.72, over last 100: 19.00
+Episodes:  200, avg score: 18.72, over last 100: 17.70
+Episodes:  300, avg score: 20.33, over last 100: 23.58
+Episodes:  400, avg score: 22.17, over last 100: 27.69
+Episodes:  500, avg score: 24.21, over last 100: 32.40
+Episodes:  600, avg score: 26.11, over last 100: 35.66
+Episodes:  700, avg score: 28.76, over last 100: 44.64
+Episodes:  800, avg score: 30.70, over last 100: 44.28
+Episodes:  900, avg score: 32.66, over last 100: 48.40
+Episodes: 1000, avg score: 34.53, over last 100: 51.34
+Episodes: 1100, avg score: 36.69, over last 100: 58.33
+Episodes: 1200, avg score: 39.71, over last 100: 72.93
+Episodes: 1300, avg score: 44.15, over last 100: 97.55
+Episodes: 1400, avg score: 58.07, over last 100: 239.13
+Episodes: 1500, avg score: 74.18, over last 100: 299.93
+Episodes: 1600, avg score: 86.92, over last 100: 278.10
+Episodes: 1700, avg score: 117.80, over last 100: 612.24
+
+
+-----------------------------------------------------------------
+File opened at 2024-07-31 20:13:20.085753
+Default parameters:
+{'run_id': '_rX', 'device': 'cpu', 'env': 'CartPole-v1', 'n_episodes': 1000, 'n_hidden_trans': 64, 'lr_trans': 0.001, 'n_hidden_pol': 64, 'lr_pol': 0.001, 'n_hidden_val': 64, 'lr_val': 0.0001, 'memory_capacity': 65536, 'batch_size': 64, 'freeze_period': 25, 'Beta': 0.99, 'gamma': 1.0, 'print_timer': 100, 'keep_log': True, 'log_path': 'logs/ai_mdp_log{}.txt', 'log_save_timer': 10, 'save_results': True, 'results_path': 'results/ai_mdp_results{}.npz', 'results_save_timer': 500, 'save_network': True, 'network_save_path': 'networks/ai_mdp_{}net{}.pth', 'network_save_timer': 500, 'load_network': False, 'network_load_path': 'networks/ai_mdp_{}net_rX.pth'}
+Environment is: CartPole-v1
+Training started at 2024-07-31 20:13:20.087623
+Episodes:  100, avg score: 19.91, over last 100: 19.99
+Episodes:  200, avg score: 19.12, over last 100: 18.33
+Episodes:  300, avg score: 19.99, over last 100: 21.73
+Episodes:  400, avg score: 21.49, over last 100: 26.00
+Episodes:  500, avg score: 24.03, over last 100: 34.20
+Episodes:  600, avg score: 26.91, over last 100: 41.34
+Episodes:  700, avg score: 29.13, over last 100: 42.46
+Episodes:  800, avg score: 31.23, over last 100: 45.97
+Episodes:  900, avg score: 33.08, over last 100: 47.94
+Training finished at 2024-07-31 20:15:02.606647
+
+-----------------------------------------------------------------
+File opened at 2024-08-01 16:34:15.809563
+Default parameters:
+{'run_id': '_rX', 'device': 'cpu', 'env': 'CartPole-v1', 'n_episodes': 1000, 'n_hidden_trans': 64, 'lr_trans': 0.001, 'n_hidden_pol': 64, 'lr_pol': 0.001, 'n_hidden_val': 64, 'lr_val': 0.0001, 'memory_capacity': 65536, 'batch_size': 64, 'freeze_period': 25, 'Beta': 0.99, 'gamma': 1.0, 'print_timer': 100, 'keep_log': True, 'log_path': 'logs/ai_mdp_log{}.txt', 'log_save_timer': 10, 'save_results': True, 'results_path': 'results/ai_mdp_results{}.npz', 'results_save_timer': 500, 'save_network': True, 'network_save_path': 'networks/ai_mdp_{}net{}.pth', 'network_save_timer': 500, 'load_network': False, 'network_load_path': 'networks/ai_mdp_{}net_rX.pth', 'record_video': True, 'record_statistics': True}
+Environment is: CartPole-v1
+Training started at 2024-08-01 16:34:16.308537
+Episodes:  100, avg score: 18.60, over last 100: 18.66
+Episodes:  200, avg score: 17.52, over last 100: 16.43
+Episodes:  300, avg score: 18.04, over last 100: 19.08
+Episodes:  400, avg score: 20.56, over last 100: 28.16
+Episodes:  500, avg score: 22.88, over last 100: 32.17
+Episodes:  600, avg score: 25.28, over last 100: 37.33
+
+
+-----------------------------------------------------------------
+File opened at 2024-08-01 16:35:39.757714
+Default parameters:
+{'run_id': '_rX', 'device': 'cpu', 'env': 'CartPole-v1', 'n_episodes': 1000, 'n_hidden_trans': 64, 'lr_trans': 0.001, 'n_hidden_pol': 64, 'lr_pol': 0.001, 'n_hidden_val': 64, 'lr_val': 0.0001, 'memory_capacity': 65536, 'batch_size': 64, 'freeze_period': 25, 'Beta': 0.99, 'gamma': 1.0, 'print_timer': 100, 'keep_log': True, 'log_path': 'logs/ai_mdp_log{}.txt', 'log_save_timer': 10, 'save_results': True, 'results_path': 'results/ai_mdp_results{}.npz', 'results_save_timer': 500, 'save_network': True, 'network_save_path': 'networks/ai_mdp_{}net{}.pth', 'network_save_timer': 500, 'load_network': False, 'network_load_path': 'networks/ai_mdp_{}net_rX.pth', 'record_video': True, 'record_statistics': True}
+Environment is: CartPole-v1
+Training started at 2024-08-01 16:35:39.760450
+Episodes:  100, avg score: 19.56, over last 100: 19.59
+Episodes:  200, avg score: 17.57, over last 100: 15.55
+Episodes:  300, avg score: 17.99, over last 100: 18.84
+Episodes:  400, avg score: 19.88, over last 100: 25.57
+Episodes:  500, avg score: 21.44, over last 100: 27.68
+Episodes:  600, avg score: 23.02, over last 100: 30.93
+Episodes:  700, avg score: 24.56, over last 100: 33.83
+Episodes:  800, avg score: 26.70, over last 100: 41.70
+Episodes:  900, avg score: 28.52, over last 100: 43.07
+Training finished at 2024-08-01 16:37:11.906506
+
+-----------------------------------------------------------------
+File opened at 2024-08-01 16:38:08.238317
+Default parameters:
+{'run_id': '_rX', 'device': 'cpu', 'env': 'CartPole-v1', 'n_episodes': 1000, 'n_hidden_trans': 64, 'lr_trans': 0.001, 'n_hidden_pol': 64, 'lr_pol': 0.001, 'n_hidden_val': 64, 'lr_val': 0.0001, 'memory_capacity': 65536, 'batch_size': 64, 'freeze_period': 25, 'Beta': 0.99, 'gamma': 1.0, 'print_timer': 100, 'keep_log': True, 'log_path': 'logs/ai_mdp_log{}.txt', 'log_save_timer': 10, 'save_results': True, 'results_path': 'results/ai_mdp_results{}.npz', 'results_save_timer': 500, 'save_network': True, 'network_save_path': 'networks/ai_mdp_{}net{}.pth', 'network_save_timer': 500, 'load_network': True, 'network_load_path': 'networks/ai_mdp_{}net_rX.pth', 'record_video': True, 'record_statistics': True}
+Environment is: CartPole-v1
+Training started at 2024-08-01 16:38:08.243863
+Episodes:  100, avg score: 68.08, over last 100: 68.28
+Episodes:  200, avg score: 108.87, over last 100: 150.06
+Episodes:  300, avg score: 99.03, over last 100: 79.26
+Episodes:  400, avg score: 100.50, over last 100: 104.94
+Episodes:  500, avg score: 163.03, over last 100: 413.76
+Episodes:  600, avg score: 226.13, over last 100: 542.24
+Episodes:  700, avg score: 229.36, over last 100: 248.81
+Episodes:  800, avg score: 208.08, over last 100: 58.86
+Episodes:  900, avg score: 192.57, over last 100: 68.38
+Training finished at 2024-08-01 17:07:47.689654
