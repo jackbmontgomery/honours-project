@@ -1,0 +1,9 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is '/Users/jackmontgomery/Desktop/UCT/Research_Project/write-up/.texpadtmp/main.blg'
+[54] biber-darwin:340> INFO - === Mon Aug  5, 2024, 21:20:10
+[66] Biber.pm:418> INFO - Reading '/Users/jackmontgomery/Desktop/UCT/Research_Project/write-up/.texpadtmp/main.bcf'
+[137] Biber.pm:972> INFO - Found 0 citekeys in bib section 0
+[149] bbl.pm:654> INFO - Writing '/Users/jackmontgomery/Desktop/UCT/Research_Project/write-up/.texpadtmp/main.bbl' with encoding 'UTF-8'
+[149] bbl.pm:757> INFO - Output to /Users/jackmontgomery/Desktop/UCT/Research_Project/write-up/.texpadtmp/main.bbl
+[149] Biber.pm:130> WARN - The file '/Users/jackmontgomery/Desktop/UCT/Research_Project/write-up/.texpadtmp/main.bcf' does not contain any citations!
+[149] Biber.pm:132> INFO - WARNINGS: 1
