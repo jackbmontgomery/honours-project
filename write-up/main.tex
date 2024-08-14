@@ -7,8 +7,10 @@
 \usepackage{soul}
 \usepackage{url}
 
+\newtheorem{definition}{Definition}
 
-\title{Honours Project}
+
+\title{Active Inference with Predictive Coding Network}
 \author{Jack Montgomery}
 \date{July 2024}
 
@@ -18,7 +20,167 @@
 
 \section{Introduction}
 
-Active inference is a unified framework for modelling sentient behaviour, deeply rooted in Bayesian statistics and the free energy principle. It posits that living organisms continuously update their internal generative models of the world to minimise the prediction error between their expected and actual sensory observations. \citep{smith2022}
+The Free Energy Principal (FEP) \citep{friston2006free} has emerged in the field of theoretical neuroscience to understand the mathematical properties that a self-organising living, biological system, must possess in order to sustain itself against thermodynamic equilibrium. It was first proposed, and especially applied to understanding the brain. From this, two main process theories have emerged predictive coding and active inference. 
+
+\vspace{1em}
+
+Predictive coding suggests that the brain's primary function is to minimise prediction error, defined as the discrepancy between expected sensory input and the actual input received. The fundamental idea is that the brain consists of a hierarchy of layers, each making predictions about the activity of the layers below. \citep{friston2008hierarchical} These top-down predictions are compared with the actual activity and inputs at each level, generating prediction errors. These errors are then sent upward to inform higher levels, enabling them to refine their own predictions and further reduce prediction error.
+
+The idea is that this hierarchy instantiates predictions at multiple scales, from the finer details in local variation of sensory data to the global properties of the causes of the data. Moreover, the fact that these errors are computed at every layer means that the layers focus on minimising local errors rather than a global loss. \citep{millidge2021applications} Which enabled predictive coding models to employ biologically plausible learning using only local and Hebbian rules. \citep{whittington2017approximation} 
+
+\vspace{1em}
+
+Active inference is a process theory that has emerged from the FEP \citep{friston2012active, friston2017active}. The theory places three cognitive processes, perception, decision-making and learning, under the general paradigm of variational inference via the minimisation of free energy. Perception can be clearly cast as an inference problem of inferring the hidden states of the environment from sensory observations. Similarly, learning is inference over the parameters of the generative model.
+
+Decision-making is cast as inference on policies over future trajectories. There are many mehtods to achieve this, but active inference achieves this by minimising the expected free energy functional which is an encoding of the agents goals in terms of a prior of future states \citep{friston2020relationship}. 
+
+\vspace{1em}
+
+Predictive Coding has been extended to the concept of a predictive coding network \citep{whittington2017approximation, bogacz2017tutorial, millidge2019implementing}, which incorporates multiple layers into the model. This structure resembles an Artificial Neural Network (ANN) but is firmly grounded in cognitive science process theories. Deep Active Inference has emerged as a method to scale active inference agents by using ANNs to approximate key components of the model \citep{millidge2020deep, fountas2020deep, himst2020deep}. However, the backpropagation algorithm used to train ANNs is not biologically plausible \citep{ororbia2024review}. Therefore, the goal of this paper is to integrate predictive coding networks used for supervised learning with deep active inference models to develop a scalable, biologically plausible active inference agent.
+
+\section{Related Work}
+
+\citet{dacosta2020active} described the application of active inference in discrete state-spaces from the ground up. When reading about active inference and its application in modelling agents. One can get stuck on how to apply the principles or whether the pursuit of applying these principles is a worthy course of action in the first place, the practical vs the biological approach. \citet{dacosta2020active} bridges this gap and explains the practical applications of active inference with motivations from the neural process theory that underlies the framework. 
+
+\citet{smith2022} then provides an introduction and practical overview of how one could go about applying the framework to empirical data. \citet{smith2022} provides an introduction to the formulation of Partially Observable MDPs as well as how this can be applied using variational \citep{winn2005variational} and marginal message passing \citep{parr2019neuronal}.
+
+The practical implementation of active inference in \citet{smith2022} is using so called tabular methods. In a POMDP one can factorise the model into different components which correspond to likelihood of an observation given current beliefs about the current environment, the A matrix. We can then describe the transition dynamics of the environment (B matrix) which explains the likelihood of being in a certain state in the next time-step given current beliefs about the state and a policy. We then use the C matrix to denote the prior distribution over observations, which encodes the agents preferences. Naturally, when dealing with larger states spaces holding these matrices becomes computationally expensive.
+
+\vspace{1em}
+
+\citep{millidge2020deep} introduces a model of 'deep' active inference which uses neural networks as function approximations for the different components of the generative model that have been described. This gave rise to very good results against traditional reinforcement algorithms, Deep Q-Learning and Actor-Critic, in the OpenAI Gym environments. This is particularly interesting since the environments used were MDP's not POMDP's which would generally suit the reinforcements learning algorithms because of their direct learning of the state value pairs, in the case of q-learning and critic network, as well as direct policy networks in the actor. The notion of direct here is due to the fact that deriving the model such as in \citep{millidge2020deep} yields epistemic terms in the network to evaluate certain actions.
+
+%TODO: Expand on this a bit
+This model was then extended by \citet{himst2020deep} to incorporate POMDPs. This was done by using a Variational Autoencoders (VAE) as so called observations models. The VAE's used in the model use an encoder network to map the previous 4 pixel observations in the environment to a latex space. The decoder network then produced observations from this latent space. 
+
+%TODO: Read the paper and describe the differences
+\citet{fountas2020deep} - Review their formulation of the deep model
+
+The approaches taken to deep active inference so far have included using neural networks to learning certain components with the objective function of some variant of free energy, depending on the paper. Though this is a very interesting venture in the case of practical applications of active inference. The approach now loses its biologically plausible approach since neural networks learning through back-propagation. 
+
+\section{Free Energy Principal and Variational Inference}
+
+The Free Energy Principal (FEP) and Variational inferences sit at the core of both the framework we will use to solve the Markov Decision Process, Active Inference, as well as the tool we will use scale the active inference model, predictive coding networks. As such, we will briefly outline both of these concepts before moving onto the model and techniques used. 
+
+The Free Energy Principal derives from a simple question. What properties must a system have in order to survive for an appreciable length of time? Generally, biological systems are fragile, they like to keep certain parameters like temperature, moisture-level etc. within a tight range. And if they do not, they die off \cite{millidge2019implementing}.
+
+Therefore, we can imagine some space of all possible states where a system aims to occupy a very small proportion of that space. In probabilistic terms, we want the distribution over all possible states to be very concentrated in the area the system wishes to occupy. Quantifying dispersion of a probability distribution is done with the use of a quantity called entropy, $H(p)$, where $p$ is some probability distribution. Entropy is defined as:
+
+\begin{equation}\label{entropy_states}
+	H(p(s)) = - \int_{s \in \mathcal{S}} p(s) \ln p(s) \ ds
+\end{equation}
+
+Where $\mathcal{S}$ denotes all possible states. 
+\footnote{It is clear that we can replace the integral for a sum in the case of a finite or countable state space} 
+And the probability that a system occupies a state $s$ is denoted by $p(s)$. 
+
+%TODO: This might be useful to place later in the work to introduce active inference
+A living system is under the influence of fluctuations from the external environment. These fluctuations will, on average, push the system into low-probability areas of the state space, purely because there are many more low probability regions. In the absence of any action from the system this will result in the dispersion of the probability distribution and therefore, higher entropy. Therefore, a living system must actively interact with their environment to maintain its own entropy. 
+
+The issue with the current formulation is that organisms do not have direct access to their own states. Instead, we minimise the entropy of the observations as a proxy for the state. This works because there should be a sensible relation between the entropy of the observations and that of the states \cite{millidge2019implementing}. This means we can rewrite the objective for the minimisation to be the entropy of the observations.
+
+\begin{equation}\label{entropy_obs}
+	\begin{aligned}
+		H(o) &= - \int_{s \in \mathcal{S}} p(o) \ln p(o) ds \\
+		&= \mathbb{E}_{p}\left[ - \ln p(o) \right]
+	\end{aligned}
+\end{equation}
+
+Another assumption that will be made is that of the ergodicity of the system. That being that the time and ensemble averages of the system are the time \cite{millidge2019implementing}. Meaning that we can rewrite the entropy formulation in (\ref{entropy_obs}), as a function of time:
+
+\begin{equation}\label{entropy_obs}
+	H(o(t)) = \lim_{T \to \infty} - \frac{1}{T} \int_0^T p(o(t)) ds
+\end{equation}
+
+The minimisation now becomes a task of minimising the entropy of the observation at every point in time, as opposed to minimising it for every possible observation. Now the objective is to minimise the negative logarithm of the observation given the model, this is known in Information Theory as surprisal.
+
+\begin{equation}
+	\begin{aligned}
+		- \ln p(o) &= - \ln \int_{s \in \mathcal{S}} p(o, s) \ ds \\
+		&= - \ln  \int_{s \in \mathcal{S}} q(s) \frac{ p(o, s)}{q(s)} \ ds \\
+		&= - \ln \mathbb{E}_{q(s)}\left[ \frac{p(o, s)}{q(s)} \right] \\
+		&\geq - \mathbb{E}_{q(s)}\left[\ln \  \frac{p(o, s)}{q(s)} \right] \\
+		&\geq \mathbb{E}_{q(s)}\left[\ln \  \frac{q(s)}{p(o, s)} \right] = \mathcal{F}
+	\end{aligned}
+\end{equation}
+
+Variational Free Energy (VFE) is denoted as $\mathcal{F}$. 
+
+To gain an intuition into the and why we use it in variational inference:
+
+\begin{equation}
+	\begin{aligned}
+		\mathcal{F} &= \mathbb{E}_{q(s)}\left[\ln \  \frac{q(s)}{p(o, s)} \right] \\
+		&= \mathbb{E}_{q(s)}\left[\ln  q(s) - \ln p(o, s) \right] \\
+		&= \mathbb{E}_{q(s)}\left[\ln  q(s) - \ln p(s | o) p(o) \right] \\
+		&= \mathbb{E}_{q(s)}\left[\ln  q(s) - \ln p(s | o) \right] - p(o)\\
+		&= D_{KL}\left[ \ q(s) \| p(s | o) \ \right] - p(o)\\
+	\end{aligned}
+\end{equation}
+
+\section{Predictive Coding}
+
+Predictive coding models refer to models in which some nodes in the network encode the differences between inputs and predictions of the network. \citep{bogacz2017tutorial}. \citet{rao1999predictive} demonstrated that a 2  when learning about features of sensory stimuli 
+
+\subsection{Energy Based Models}
+
+\subsection{Predictive Coding Networks}
+
+\subsection{Predictive Coding as Variational Inference}
+
+Modern predictive coding models can be described as a variational inference model on hidden causes of sensory sensation. \citep{millidge2021applications}
+
+\subsection{Approximating Backpropagation}
+
+\subsection{Beyond Backpropagation}
+
+\section{Active Inference and MDPs}
+
+\subsection{Generative Models}
+
+Active inference presents a unified theory for modelling sentient behaviour. The framework presents perception, learning and actions can all be seen as optimising two complementary functionals. \citep{dacosta2020active} That is, variational free energy, which measures the fit between an agents internal model and sensory observations. And expected free energy, which scores the future courses of action in relation to prior preferences. \citep{dacosta2020active}
+
+To formulate the respective functionals we will first need to introduce the notion of KL-divergence. KL-divergence can be understood as the difference between two respective distributions.
+
+
+\begin{definition}[KL Divergence]\label{kl_divergence}
+	Let q, and p be two distributions defined over $\Omega$. The KL-divergence between then is defined as:
+	\begin{align*}
+		D_{KL}\left[ q(x) \| p(x) \right] &= \mathbb{E}_{q(x)}\left[ \log 
+		\frac{q(x)}{p(x)} \right] \\
+		&= \sum_{x \in \Omega} q(x) \log \frac{q(x)}{p(x)}
+	\end{align*}
+\end{definition}
+
+The formulation clearly suits our needs for a divergence measure between two distributions. Furthermore, let us consider some joint distribution over all states, action and observations in a POMDP which will be called the generative model of our agent. This generative model is a model of the generative process that creates sensory data that the agent then observes.
+
+\begin{definition}[POMDP Generative Model]\label{pomdp_generative_model}
+$$
+p(s_t, o_t, a_t, s_{t-1}, a_{t-1}) = p(o_t | s_t) \ p(a_t | s_t) \ p(s_t | s_{t-1}, a_{t-1}) \ q(s_{t-1}, a_{t-1})
+$$
+\end{definition} 
+
+Note that the model need only consider the state and observation of the timestep before by invoking the Markov Property.
+
+Throughout the text, $p(\cdot)$ will be used to denote the true generative model and $q(\cdot)$ will be used to denote the variational posterior distribution.
+
+When an agent observes some sensory input how can it update its beliefs of the state it is currently in. 
+
+\subsection{Perception}
+\subsection{Learning}
+\subsection{Action}
+
+\section{Deep Active Inference with Predictive Coding Network}
+
+\subsection{Deep Active Inference}
+
+\subsection{Model and Environments}
+
+\section{Results}
+
+\section{Discussion}
+
+\section{Conclusion}
 
 
 \bibliography{references}
