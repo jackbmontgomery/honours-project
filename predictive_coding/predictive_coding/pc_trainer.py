@@ -463,9 +463,9 @@ class PCTrainer(object):
         callback_after_backward_kwargs: dict = {},
         callback_after_t: typing.Callable = None,
         callback_after_t_kwargs: dict = {},
-        is_log_progress: bool = True,
+        is_log_progress: bool = False,
         is_return_results_every_t: bool = False,
-        is_checking_after_callback_after_t: bool = True,
+        is_checking_after_callback_after_t: bool = False,
         debug: dict = {},
         backward_kwargs: dict = {},
         is_clear_energy_after_use: bool = False,
@@ -619,15 +619,15 @@ class PCTrainer(object):
         else:
             t_iterator = range(self._T)
 
-        # if self._is_plot_progress:
-        #     if not is_return_results_every_t:
-        #         warnings.warn(
-        #             (
-        #                 "Note that plot_progress requires is_return_results_every_t, this has been turned on for you. "
-        #             ),
-        #             category=RuntimeWarning
-        #         )
-        #         is_return_results_every_t = True
+        if self._is_plot_progress:
+            if not is_return_results_every_t:
+                warnings.warn(
+                    (
+                        "Note that plot_progress requires is_return_results_every_t, this has been turned on for you. "
+                    ),
+                    category=RuntimeWarning
+                )
+                is_return_results_every_t = True
 
         if is_return_results_every_t:
             utils.slow_down_warning(
@@ -896,19 +896,19 @@ class PCTrainer(object):
                 t_iterator.set_description(log_progress)
 
             # plot_progress
-            # if self._is_plot_progress:
+            if self._is_plot_progress:
 
-            #     utils.slow_down_warning("PCTrainer", "plot_progress_at", "[]")
+                utils.slow_down_warning("PCTrainer", "plot_progress_at", "[]")
 
-            #     if (isinstance(self._plot_progress_at, str) and self._plot_progress_at == "all") or (self._h in self._plot_progress_at):
+                if (isinstance(self._plot_progress_at, str) and self._plot_progress_at == "all") or (self._h in self._plot_progress_at):
 
-            #         for key in ["loss", "energy", "overall"]:
-            #             result = results[key]
-            #             if isinstance(result, list) and len(result) > 1:
-            #                 self._plot_progress["key"].append(key)
-            #                 self._plot_progress["h"].append(self._h)
-            #                 self._plot_progress["t"].append(t)
-            #                 self._plot_progress["value"].append(result[-1])
+                    for key in ["loss", "energy", "overall"]:
+                        result = results[key]
+                        if isinstance(result, list) and len(result) > 1:
+                            self._plot_progress["key"].append(key)
+                            self._plot_progress["h"].append(self._h)
+                            self._plot_progress["t"].append(t)
+                            self._plot_progress["value"].append(result[-1])
 
             # early_stop
             if early_stop:
@@ -917,87 +917,87 @@ class PCTrainer(object):
             # <- inference
 
         # plot_progress
-        # if self._is_plot_progress:
+        if self._is_plot_progress:
 
-        #     utils.slow_down_warning("PCTrainer", "plot_progress_at", "[]")
+            utils.slow_down_warning("PCTrainer", "plot_progress_at", "[]")
 
-        #     if (isinstance(self._plot_progress_at, str) and self._plot_progress_at == "all") or (isinstance(self._plot_progress_at, list) and len(self._plot_progress_at) > 0 and self._h == max(self._plot_progress_at)):
+            if (isinstance(self._plot_progress_at, str) and self._plot_progress_at == "all") or (isinstance(self._plot_progress_at, list) and len(self._plot_progress_at) > 0 and self._h == max(self._plot_progress_at)):
 
-        #         input(
-        #             "Is plot progress at {}? (Set plot_progress_at=[] in creation of pc_trainer to disable this. )".format(
-        #                 self._h
-        #             )
-        #         )
+                input(
+                    "Is plot progress at {}? (Set plot_progress_at=[] in creation of pc_trainer to disable this. )".format(
+                        self._h
+                    )
+                )
 
-        #         working_home = os.environ.get('WORKING_HOME')
-        #         if working_home is None:
-        #             working_home = "~/"
-        #             warnings.warn(
-        #                 "Please specify your working home by setting the WORKING_HOME environment variable (using absolute path if you are using ray, otherwise relative path like ~/ is fine), defaulting to {}".format(
-        #                     working_home
-        #                 ),
-        #                 category=RuntimeWarning
-        #             )
+                working_home = os.environ.get('WORKING_HOME')
+                if working_home is None:
+                    working_home = "~/"
+                    warnings.warn(
+                        "Please specify your working home by setting the WORKING_HOME environment variable (using absolute path if you are using ray, otherwise relative path like ~/ is fine), defaulting to {}".format(
+                            working_home
+                        ),
+                        category=RuntimeWarning
+                    )
 
-        #         log_dir = os.path.join(
-        #             working_home, "general-energy-nets", "plot_progress"
-        #         )
+                log_dir = os.path.join(
+                    working_home, "general-energy-nets", "plot_progress"
+                )
 
-        #         if not os.path.exists(log_dir):
-        #             os.makedirs(log_dir)
+                if not os.path.exists(log_dir):
+                    os.makedirs(log_dir)
 
-        #         data = pd.DataFrame(self._plot_progress)
+                data = pd.DataFrame(self._plot_progress)
 
-        #         # debug
-        #         # pd.set_option('display.max_rows', 500)
-        #         # input(data)
+                # debug
+                # pd.set_option('display.max_rows', 500)
+                # input(data)
 
-        #         plt.figure()
-        #         sns.relplot(
-        #             data=data,
-        #             x="t",
-        #             y="value",
-        #             hue="h",
-        #             palette="rocket_r",
-        #             col="key",
-        #             kind='line',
-        #             facet_kws={
-        #                 "sharey": False,
-        #                 "legend_out": False,
-        #             },
-        #         ).set(yscale='log')
-        #         plt.savefig(
-        #             os.path.join(
-        #                 log_dir, "combined-{}.png".format(self._h)
-        #             )
-        #         )
+                plt.figure()
+                sns.relplot(
+                    data=data,
+                    x="t",
+                    y="value",
+                    hue="h",
+                    palette="rocket_r",
+                    col="key",
+                    kind='line',
+                    facet_kws={
+                        "sharey": False,
+                        "legend_out": False,
+                    },
+                ).set(yscale='log')
+                plt.savefig(
+                    os.path.join(
+                        log_dir, "combined-{}.png".format(self._h)
+                    )
+                )
 
-        #         plt.figure()
-        #         sns.relplot(
-        #             data=data,
-        #             x="t",
-        #             y="value",
-        #             hue="h",
-        #             row="h",
-        #             palette="rocket_r",
-        #             col="key",
-        #             kind='line',
-        #             facet_kws={
-        #                 "sharey": False,
-        #                 "legend_out": False,
-        #             },
-        #         ).set(yscale='log')
-        #         plt.savefig(
-        #             os.path.join(
-        #                 log_dir, "seperated-{}.png".format(self._h)
-        #             )
-        #         )
+                plt.figure()
+                sns.relplot(
+                    data=data,
+                    x="t",
+                    y="value",
+                    hue="h",
+                    row="h",
+                    palette="rocket_r",
+                    col="key",
+                    kind='line',
+                    facet_kws={
+                        "sharey": False,
+                        "legend_out": False,
+                    },
+                ).set(yscale='log')
+                plt.savefig(
+                    os.path.join(
+                        log_dir, "seperated-{}.png".format(self._h)
+                    )
+                )
 
-        #         plt.close()
+                plt.close()
 
-        #     self._h += 1
+            self._h += 1
 
-        # return results
+        return results
 
     #  PRIVATE METHODS  ########################################################################################################
 

@@ -1,2 +1,4 @@
 inferactively-pymdp
 matplotlib
+tqdm
+torch
