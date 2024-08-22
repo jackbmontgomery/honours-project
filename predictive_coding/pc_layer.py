@@ -16,6 +16,7 @@ class PCLayer(nn.Module):
         self,
         energy_fn: typing.Callable = lambda inputs: 0.5 *
             (inputs['mu'] - inputs['x'])**2,
+        energy_fn_kwargs: dict = {},
         sample_x_fn: typing.Callable = lambda inputs: inputs['mu'].detach(
                 ).clone(),
         S: torch.Tensor = None,
@@ -47,7 +48,7 @@ class PCLayer(nn.Module):
                     1, in training mode, and
                     2, you have just called pc_layer.set_is_sample_x(True).
                 When both above conditions are satisfied, sample_x_fn will be used to sample x from mu, but just for one time, then self._is_sample_x is set to False again.
-                Normally, you should not care about controlling when to sample x from mu at this level, the PCLayer level (meaning you don't have to call pc_layer.set_is_sample_x(True) yourself), 
+                Normally, you should not care about controlling when to sample x from mu at this level, the PCLayer level (meaning you don't have to call pc_layer.set_is_sample_x(True) yourself),
                     because PCTrainer has handled this, see arugments <is_sample_x_at_epoch_start> of PCTrainer.train_on_batch().
                 For example:
                     If sample_x_fn = lambda inputs: inputs['mu']
@@ -78,6 +79,8 @@ class PCLayer(nn.Module):
 
         assert callable(energy_fn)
         self._energy_fn = energy_fn
+
+        self._energy_fn_kwargs = energy_fn_kwargs
 
         self.clear_energy()
 
@@ -119,20 +122,17 @@ class PCLayer(nn.Module):
     def get_is_sample_x(self) -> bool:
         """
         """
-
         return self._is_sample_x
 
     def set_is_sample_x(self, is_sample_x: bool) -> None:
         """
         """
-
         assert isinstance(is_sample_x, bool)
         self._is_sample_x = is_sample_x
 
     def get_x(self) -> nn.Parameter:
         """
         """
-
         return self._x
 
     #  METHODS  ##############################################################################################################
@@ -272,7 +272,7 @@ class PCLayer(nn.Module):
             }
             energy_fn_inputs.update(energy_fn_additional_inputs)
 
-            energy = self._energy_fn(energy_fn_inputs)
+            energy = self._energy_fn(energy_fn_inputs, **self._energy_fn_kwargs)
 
             if self._S is not None:
                 # [batch_size, size_mu, size_x]

@@ -1,0 +1,165 @@
+2024-08-21 13:14:03,381 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Current SDK version is 0.17.6
+2024-08-21 13:14:03,381 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Configure stats pid to 53867
+2024-08-21 13:14:03,381 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Loading settings from /Users/jackmontgomery/.config/wandb/settings
+2024-08-21 13:14:03,381 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Loading settings from /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/settings
+2024-08-21 13:14:03,381 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-08-21 13:14:03,381 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-08-21 13:14:03,381 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-08-21 13:14:03,381 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-08-21 13:14:03,381 INFO    MainThread:53867 [wandb_init.py:_log_setup():521] Logging user logs to /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240821_131403-kymx405p/logs/debug.log
+2024-08-21 13:14:03,381 INFO    MainThread:53867 [wandb_init.py:_log_setup():522] Logging internal logs to /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240821_131403-kymx405p/logs/debug-internal.log
+2024-08-21 13:14:03,381 INFO    MainThread:53867 [wandb_init.py:_jupyter_setup():467] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x3187f9550>
+2024-08-21 13:14:03,381 INFO    MainThread:53867 [wandb_init.py:init():559] calling init triggers
+2024-08-21 13:14:03,381 INFO    MainThread:53867 [wandb_init.py:init():566] wandb.init called with sweep_config: {}
+config: {'env_name': 'CartPole-v1', 'buffer_size': 1000, 'batch_size': 64, 'gamma': 0.99, 'x_lr': 0.01, 'p_lr': 0.001}
+2024-08-21 13:14:03,382 INFO    MainThread:53867 [wandb_init.py:init():609] starting backend
+2024-08-21 13:14:03,382 INFO    MainThread:53867 [wandb_init.py:init():613] setting up manager
+2024-08-21 13:14:03,382 INFO    MainThread:53867 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2024-08-21 13:14:03,383 INFO    MainThread:53867 [wandb_init.py:init():621] backend started and connected
+2024-08-21 13:14:03,395 INFO    MainThread:53867 [wandb_run.py:_label_probe_notebook():1337] probe notebook
+2024-08-21 13:14:03,395 INFO    MainThread:53867 [wandb_run.py:_label_probe_notebook():1347] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2024-08-21 13:14:03,395 INFO    MainThread:53867 [wandb_init.py:init():716] updated telemetry
+2024-08-21 13:14:03,419 INFO    MainThread:53867 [wandb_init.py:init():749] communicating run to backend with 90.0 second timeout
+2024-08-21 13:14:04,132 INFO    MainThread:53867 [wandb_run.py:_on_init():2438] communicating current version
+2024-08-21 13:14:04,199 INFO    MainThread:53867 [wandb_run.py:_on_init():2447] got version response upgrade_message: "wandb version 0.17.7 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-08-21 13:14:04,200 INFO    MainThread:53867 [wandb_init.py:init():800] starting run threads in backend
+2024-08-21 13:14:07,128 WARNING MainThread:53867 [wandb_init.py:init():1181] interrupted
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/wandb_init.py", line 1177, in init
+    return wi.init()
+           ^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/wandb_init.py", line 813, in init
+    run_start_result = run_start_handle.wait(timeout=30)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/lib/mailbox.py", line 283, in wait
+    found, abandoned = self._slot._get_and_clear(timeout=wait_timeout)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/lib/mailbox.py", line 130, in _get_and_clear
+    if self._wait(timeout=timeout):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/lib/mailbox.py", line 126, in _wait
+    return self._event.wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/threading.py", line 622, in wait
+    signaled = self._cond.wait(timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/threading.py", line 324, in wait
+    gotit = waiter.acquire(True, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2024-08-21 13:14:22,358 INFO    MainThread:53867 [wandb_settings.py:_apply_login():1936] Applying login settings: {}
+2024-08-21 13:14:22,406 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Current SDK version is 0.17.6
+2024-08-21 13:14:22,406 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Configure stats pid to 53867
+2024-08-21 13:14:22,406 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Loading settings from /Users/jackmontgomery/.config/wandb/settings
+2024-08-21 13:14:22,406 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Loading settings from /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/settings
+2024-08-21 13:14:22,406 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-08-21 13:14:22,406 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-08-21 13:14:22,406 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-08-21 13:14:22,406 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-08-21 13:14:22,406 INFO    MainThread:53867 [wandb_init.py:_log_setup():521] Logging user logs to /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240821_131422-5qgw4zu4/logs/debug.log
+2024-08-21 13:14:22,406 INFO    MainThread:53867 [wandb_init.py:_log_setup():522] Logging internal logs to /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240821_131422-5qgw4zu4/logs/debug-internal.log
+2024-08-21 13:14:22,406 INFO    MainThread:53867 [wandb_init.py:init():559] calling init triggers
+2024-08-21 13:14:22,406 INFO    MainThread:53867 [wandb_init.py:init():566] wandb.init called with sweep_config: {}
+config: {'env_name': 'CartPole-v1', 'buffer_size': 1000, 'batch_size': 64, 'gamma': 0.99, 'x_lr': 0.01, 'p_lr': 0.001}
+2024-08-21 13:14:22,406 INFO    MainThread:53867 [wandb_init.py:init():609] starting backend
+2024-08-21 13:14:22,406 INFO    MainThread:53867 [wandb_init.py:init():613] setting up manager
+2024-08-21 13:14:22,407 INFO    MainThread:53867 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2024-08-21 13:14:22,407 INFO    MainThread:53867 [wandb_init.py:init():621] backend started and connected
+2024-08-21 13:14:22,417 INFO    MainThread:53867 [wandb_run.py:_label_probe_notebook():1337] probe notebook
+2024-08-21 13:14:22,417 INFO    MainThread:53867 [wandb_run.py:_label_probe_notebook():1347] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2024-08-21 13:14:22,418 INFO    MainThread:53867 [wandb_init.py:init():716] updated telemetry
+2024-08-21 13:14:22,440 INFO    MainThread:53867 [wandb_init.py:init():749] communicating run to backend with 90.0 second timeout
+2024-08-21 13:14:23,138 INFO    MainThread:53867 [wandb_run.py:_on_init():2438] communicating current version
+2024-08-21 13:14:23,194 INFO    MainThread:53867 [wandb_run.py:_on_init():2447] got version response upgrade_message: "wandb version 0.17.7 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-08-21 13:14:23,195 INFO    MainThread:53867 [wandb_init.py:init():800] starting run threads in backend
+2024-08-21 13:14:53,471 INFO    MainThread:53867 [wandb_run.py:_console_start():2416] atexit reg
+2024-08-21 13:14:53,472 INFO    MainThread:53867 [wandb_run.py:_redirect():2258] redirect: wrap_raw
+2024-08-21 13:14:53,472 INFO    MainThread:53867 [wandb_run.py:_redirect():2323] Wrapping output streams.
+2024-08-21 13:14:53,472 INFO    MainThread:53867 [wandb_run.py:_redirect():2348] Redirects installed.
+2024-08-21 13:14:53,472 INFO    MainThread:53867 [wandb_init.py:init():843] run started, returning control to user process
+2024-08-21 13:14:53,473 WARNING MsgRouterThr:53867 [router.py:message_loop():77] message_loop has been closed
+2024-08-21 13:15:26,383 INFO    MainThread:53867 [wandb_run.py:_finish():2110] finishing run jackbmontgomery-university-of-cape-town/supervised-predictive-coding/5qgw4zu4
+2024-08-21 13:15:26,384 INFO    MainThread:53867 [wandb_run.py:_atexit_cleanup():2377] got exitcode: 0
+2024-08-21 13:15:26,384 INFO    MainThread:53867 [wandb_run.py:_restore():2355] restore
+2024-08-21 13:15:26,384 INFO    MainThread:53867 [wandb_run.py:_restore():2361] restore done
+2024-08-21 13:15:31,719 INFO    MainThread:53867 [wandb_run.py:_footer_history_summary_info():4035] rendering history
+2024-08-21 13:15:31,720 INFO    MainThread:53867 [wandb_run.py:_footer_history_summary_info():4067] rendering summary
+2024-08-21 13:15:31,723 INFO    MainThread:53867 [wandb_run.py:_footer_sync_info():3994] logging synced files
+2024-08-21 13:16:31,188 INFO    MainThread:53867 [wandb_settings.py:_apply_login():1936] Applying login settings: {}
+2024-08-21 13:16:31,196 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Current SDK version is 0.17.6
+2024-08-21 13:16:31,196 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Configure stats pid to 53867
+2024-08-21 13:16:31,196 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Loading settings from /Users/jackmontgomery/.config/wandb/settings
+2024-08-21 13:16:31,196 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Loading settings from /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/settings
+2024-08-21 13:16:31,196 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-08-21 13:16:31,196 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-08-21 13:16:31,196 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-08-21 13:16:31,196 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-08-21 13:16:31,196 INFO    MainThread:53867 [wandb_init.py:_log_setup():521] Logging user logs to /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240821_131631-vkp7nnhy/logs/debug.log
+2024-08-21 13:16:31,196 INFO    MainThread:53867 [wandb_init.py:_log_setup():522] Logging internal logs to /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240821_131631-vkp7nnhy/logs/debug-internal.log
+2024-08-21 13:16:31,196 INFO    MainThread:53867 [wandb_init.py:init():559] calling init triggers
+2024-08-21 13:16:31,196 INFO    MainThread:53867 [wandb_init.py:init():566] wandb.init called with sweep_config: {}
+config: {'env_name': 'CartPole-v1', 'buffer_size': 1000, 'batch_size': 64, 'gamma': 0.99, 'x_lr': 0.01, 'p_lr': 0.001}
+2024-08-21 13:16:31,196 INFO    MainThread:53867 [wandb_init.py:init():609] starting backend
+2024-08-21 13:16:31,196 INFO    MainThread:53867 [wandb_init.py:init():613] setting up manager
+2024-08-21 13:16:31,197 INFO    MainThread:53867 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2024-08-21 13:16:31,198 INFO    MainThread:53867 [wandb_init.py:init():621] backend started and connected
+2024-08-21 13:16:31,206 INFO    MainThread:53867 [wandb_run.py:_label_probe_notebook():1337] probe notebook
+2024-08-21 13:16:31,207 INFO    MainThread:53867 [wandb_run.py:_label_probe_notebook():1347] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2024-08-21 13:16:31,207 INFO    MainThread:53867 [wandb_init.py:init():716] updated telemetry
+2024-08-21 13:16:31,230 INFO    MainThread:53867 [wandb_init.py:init():749] communicating run to backend with 90.0 second timeout
+2024-08-21 13:16:32,065 INFO    MainThread:53867 [wandb_run.py:_on_init():2438] communicating current version
+2024-08-21 13:16:32,125 INFO    MainThread:53867 [wandb_run.py:_on_init():2447] got version response upgrade_message: "wandb version 0.17.7 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-08-21 13:16:32,125 INFO    MainThread:53867 [wandb_init.py:init():800] starting run threads in backend
+2024-08-21 13:16:36,001 INFO    MainThread:53867 [wandb_run.py:_console_start():2416] atexit reg
+2024-08-21 13:16:36,002 INFO    MainThread:53867 [wandb_run.py:_redirect():2258] redirect: wrap_raw
+2024-08-21 13:16:36,002 INFO    MainThread:53867 [wandb_run.py:_redirect():2323] Wrapping output streams.
+2024-08-21 13:16:36,002 INFO    MainThread:53867 [wandb_run.py:_redirect():2348] Redirects installed.
+2024-08-21 13:16:36,002 INFO    MainThread:53867 [wandb_init.py:init():843] run started, returning control to user process
+2024-08-21 13:21:38,105 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Current SDK version is 0.17.6
+2024-08-21 13:21:38,106 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Configure stats pid to 53867
+2024-08-21 13:21:38,107 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Loading settings from /Users/jackmontgomery/.config/wandb/settings
+2024-08-21 13:21:38,107 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Loading settings from /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/settings
+2024-08-21 13:21:38,107 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-08-21 13:21:38,107 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-08-21 13:21:38,107 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-08-21 13:21:38,107 INFO    MainThread:53867 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-08-21 13:21:38,107 INFO    MainThread:53867 [wandb_init.py:_log_setup():521] Logging user logs to /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240821_132138-5jhydeks/logs/debug.log
+2024-08-21 13:21:38,107 INFO    MainThread:53867 [wandb_init.py:_log_setup():522] Logging internal logs to /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240821_132138-5jhydeks/logs/debug-internal.log
+2024-08-21 13:21:38,107 INFO    MainThread:53867 [wandb_init.py:init():559] calling init triggers
+2024-08-21 13:21:38,107 INFO    MainThread:53867 [wandb_init.py:init():566] wandb.init called with sweep_config: {}
+config: {'env_name': 'CartPole-v1', 'buffer_size': 1000, 'batch_size': 64, 'gamma': 0.99, 'x_lr': 0.01, 'p_lr': 0.001}
+2024-08-21 13:21:38,107 INFO    MainThread:53867 [wandb_init.py:init():584] re-initializing run, found existing run on stack: vkp7nnhy
+2024-08-21 13:21:38,108 INFO    MainThread:53867 [wandb_run.py:_finish():2110] finishing run jackbmontgomery-university-of-cape-town/supervised-predictive-coding/vkp7nnhy
+2024-08-21 13:21:38,109 INFO    MainThread:53867 [wandb_run.py:_atexit_cleanup():2377] got exitcode: 0
+2024-08-21 13:21:38,110 INFO    MainThread:53867 [wandb_run.py:_restore():2355] restore
+2024-08-21 13:21:38,110 INFO    MainThread:53867 [wandb_run.py:_restore():2361] restore done
+2024-08-21 13:21:45,406 INFO    MainThread:53867 [wandb_run.py:_footer_history_summary_info():4035] rendering history
+2024-08-21 13:21:45,407 INFO    MainThread:53867 [wandb_run.py:_footer_history_summary_info():4067] rendering summary
+2024-08-21 13:21:45,418 INFO    MainThread:53867 [wandb_run.py:_footer_sync_info():3994] logging synced files
+2024-08-21 13:21:45,615 INFO    MainThread:53867 [wandb_init.py:init():609] starting backend
+2024-08-21 13:21:45,615 INFO    MainThread:53867 [wandb_init.py:init():613] setting up manager
+2024-08-21 13:21:45,619 INFO    MainThread:53867 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2024-08-21 13:21:45,620 INFO    MainThread:53867 [wandb_init.py:init():621] backend started and connected
+2024-08-21 13:21:45,632 INFO    MainThread:53867 [wandb_run.py:_label_probe_notebook():1337] probe notebook
+2024-08-21 13:21:45,633 INFO    MainThread:53867 [wandb_run.py:_label_probe_notebook():1347] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2024-08-21 13:21:45,633 INFO    MainThread:53867 [wandb_init.py:init():716] updated telemetry
+2024-08-21 13:21:45,670 INFO    MainThread:53867 [wandb_init.py:init():749] communicating run to backend with 90.0 second timeout
+2024-08-21 13:21:47,156 INFO    MainThread:53867 [wandb_run.py:_on_init():2438] communicating current version
+2024-08-21 13:21:47,217 INFO    MainThread:53867 [wandb_run.py:_on_init():2447] got version response upgrade_message: "wandb version 0.17.7 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-08-21 13:21:47,217 INFO    MainThread:53867 [wandb_init.py:init():800] starting run threads in backend
+2024-08-21 13:21:51,076 INFO    MainThread:53867 [wandb_run.py:_console_start():2416] atexit reg
+2024-08-21 13:21:51,076 INFO    MainThread:53867 [wandb_run.py:_redirect():2258] redirect: wrap_raw
+2024-08-21 13:21:51,077 INFO    MainThread:53867 [wandb_run.py:_redirect():2323] Wrapping output streams.
+2024-08-21 13:21:51,077 INFO    MainThread:53867 [wandb_run.py:_redirect():2348] Redirects installed.
+2024-08-21 13:21:51,077 INFO    MainThread:53867 [wandb_init.py:init():843] run started, returning control to user process
+2024-08-21 13:24:03,311 INFO    MainThread:53867 [wandb_run.py:_finish():2110] finishing run jackbmontgomery-university-of-cape-town/supervised-predictive-coding/5jhydeks
+2024-08-21 13:24:03,312 INFO    MainThread:53867 [wandb_run.py:_atexit_cleanup():2377] got exitcode: 0
+2024-08-21 13:24:03,312 INFO    MainThread:53867 [wandb_run.py:_restore():2355] restore
+2024-08-21 13:24:03,312 INFO    MainThread:53867 [wandb_run.py:_restore():2361] restore done
+2024-08-21 13:24:11,013 INFO    MainThread:53867 [wandb_run.py:_footer_history_summary_info():4035] rendering history
+2024-08-21 13:24:11,014 INFO    MainThread:53867 [wandb_run.py:_footer_history_summary_info():4067] rendering summary
+2024-08-21 13:24:11,017 INFO    MainThread:53867 [wandb_run.py:_footer_sync_info():3994] logging synced files

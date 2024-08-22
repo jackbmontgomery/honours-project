@@ -1,0 +1,36 @@
+{
+    "os": "macOS-14.5-arm64-arm-64bit",
+    "python": "3.11.5",
+    "heartbeatAt": "2024-08-21T11:14:23.377955",
+    "startedAt": "2024-08-21T11:14:22.404242",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "<python with no main file>",
+    "codePathLocal": null,
+    "git": {
+        "remote": "https://github.com/jackbmontgomery/deep-predictive-active-inference.git",
+        "commit": "1691130b1ebb3fdf0ed5eb01f8f3d39f97f44a07"
+    },
+    "email": "jackbmontgomery2001@gmail.com",
+    "root": "/Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference",
+    "host": "Jacks-MacBook-Pro-2.local",
+    "username": "jackmontgomery",
+    "executable": "/Users/jackmontgomery/anaconda3/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "disk": {
+        "/": {
+            "total": 228.27386474609375,
+            "used": 212.72167205810547
+        }
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 16.0
+    }
+}

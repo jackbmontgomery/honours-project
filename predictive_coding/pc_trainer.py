@@ -28,7 +28,7 @@ class PCTrainer(object):
         optimizer_x_kwargs: dict = {"lr": 0.1},
         manual_optimizer_x_fn: typing.Callable = None,
         x_lr_amplifier: float = 1.0,
-        x_lr_discount: float = 0.5,
+        x_lr_discount: float = 1.0,
         loss_x_fn: typing.Callable = None,
         loss_inputs_fn: typing.Callable = None,
         optimizer_p_fn: typing.Callable = optim.Adam,
@@ -36,11 +36,12 @@ class PCTrainer(object):
         manual_optimizer_p_fn: typing.Callable = None,
         T: int = 512,
         update_x_at: typing.Union[str, typing.List[int]] = "all",
-        update_p_at: typing.Union[str, typing.List[int]] = "all",
+        update_p_at: typing.Union[str, typing.List[int]] = "last",
+        accumulate_p_at: typing.Union[str, typing.List[int]] = "never",
         energy_coefficient: float = 1.0,
         early_stop_condition: str = "False",
         update_p_at_early_stop: bool = True,
-        plot_progress_at: typing.Union[str, typing.List[int]] = "all",
+        plot_progress_at: typing.Union[str, typing.List[int]] = [],
         is_disable_warning_energy_from_different_batch_sizes: bool = False,
     ):
         """Creates a new instance of ``PCTrainer``.
@@ -227,6 +228,12 @@ class PCTrainer(object):
         )
         self._update_p_at = update_p_at
 
+        accumulate_p_at = self._preprocess_step_index_list(
+            indices=accumulate_p_at,
+            T=self._T,
+        )
+        self._accumulate_p_at = accumulate_p_at
+
         assert isinstance(energy_coefficient, float)
         self._energy_coefficient = energy_coefficient
 
@@ -264,9 +271,17 @@ class PCTrainer(object):
     def get_optimizer_x(self) -> optim.Optimizer:
         return self._optimizer_x
 
+    def get_optimizer_x_lr(self):
+        for param_group in self._optimizer_x.param_groups:
+            return param_group['lr'] 
+
     def set_optimizer_x(self, optimizer_x: optim.Optimizer) -> None:
         assert isinstance(optimizer_x, optim.Optimizer)
         self._optimizer_x = optimizer_x
+
+    def set_optimizer_x_lr(self, lr:float) -> None:
+        for param_group in self._optimizer_x.param_groups:
+            param_group['lr'] = lr 
 
     def get_optimizer_p(self) -> optim.Optimizer:
         return self._optimizer_p
@@ -362,6 +377,25 @@ class PCTrainer(object):
         for param in self._model.parameters():
             if not any(param is x for x in all_model_xs):
                 yield param
+    
+    def get_numparameters(self, is_gen=True):
+        parameters = self.get_model_parameters()
+        if is_gen:
+            num_params = sum((p.numel() if i != 0 else 0) for i, p in enumerate(parameters))
+        else:
+            num_params = sum(p.numel() for p in parameters)
+        return num_params
+
+    def get_weights_norms(self):
+        weights_abs=[]
+        mu_abs = []
+        params = self.get_model_parameters()
+        for par in params:
+            if len(par.size())==1:
+                mu_abs.append(par.abs().mean())
+            elif len(par.size())==2:
+                weights_abs.append(par.abs().mean())
+        return weights_abs, mu_abs
 
     def get_model_pc_layers(self) -> typing.Generator[pc_layer.PCLayer, None, None]:
         """Retrieves all :class:`pc_layer.PCLayer`s contained in the trained model."""
@@ -380,7 +414,6 @@ class PCTrainer(object):
     def get_model_xs(self, is_warning_x_not_initialized=True) -> typing.Generator[nn.Parameter, None, None]:
         """Retrieves xs.
         """
-
         for pc_layer in self.get_model_pc_layers():
             model_x = pc_layer.get_x()
             if model_x is not None:
@@ -395,6 +428,19 @@ class PCTrainer(object):
                         ),
                         category=RuntimeWarning
                     )
+
+    def get_model_representations(self):
+        xs = self.get_model_xs()
+        for x in xs:
+            return x.clone().detach().cpu()
+
+
+    def get_model_xs_copy(self):
+        xs = self.get_model_xs()
+        out=[]
+        for x in xs:
+            out.append(x.clone().detach().cpu())
+        return out
 
     def get_num_pc_layers(self) -> int:
         """Computes the total number of :class:`pc_layer.PCLayer contained by the trained model."""
@@ -470,6 +516,9 @@ class PCTrainer(object):
         backward_kwargs: dict = {},
         is_clear_energy_after_use: bool = False,
         is_return_outputs: bool = False,
+        is_return_representations: bool = False,
+        is_return_xs: bool = False,
+        is_return_batchelement_loss: bool = False
     ):
         """Train on a batch.
 
@@ -507,16 +556,6 @@ class PCTrainer(object):
             is_unwrap_inputs: If unwrap inputs to be multiple arguments.
 
             is_optimize_inputs: If optimize inputs.
-                If True, the inputs will be optimized, along with x in your pc_layers.
-                    Behind the scene, the inputs will be wrapped into a Parameter, and appended to the optimizer_x.
-                    You can access the optimized inputs by pc_trainer.inputs.
-                A more elegent way of doing this (also slightly more efficient) would be 
-                    put a pc_layer at the beginning of your model 
-                    set the energy_fn of this pc_layer to be lambda inputs: 0.0 * inputs['mu'] (i.e., a invalid energy_fn).
-                    set is_optimize_inputs to False here 
-                    You can access the optimized inputs by the_first_pc_layer_you_added.get_x().
-                        by setting the energy_fn to be a valid energy_fn, you add some forces on the inputs that you were optimizing, for example, enforce it to be a onehot vector.
-                            I hope this helps you see the flexibility of using pc_layers to achieve interesting things.
 
             callback_after_backward: Callback functon after backward. It is a good place to do clip gradients. The function will takes in
                 - t
@@ -610,6 +649,9 @@ class PCTrainer(object):
         assert isinstance(debug, dict)
 
         assert isinstance(is_return_outputs, bool)
+        assert isinstance(is_return_representations, bool)
+        assert isinstance(is_return_xs, bool)
+
 
         # create t_iterator
         if is_log_progress:
@@ -642,6 +684,12 @@ class PCTrainer(object):
         }
         if is_return_outputs:
             results["outputs"] = []
+        
+        if is_return_representations:
+            results["representations"] = []
+
+        if is_return_xs:
+            results["xs"] = []
 
         is_dynamic_x_lr = ((self._x_lr_discount < 1.0)
                            or (self._x_lr_amplifier > 1.0))
@@ -658,7 +706,7 @@ class PCTrainer(object):
                 raise NotImplementedError
         else:
             unwrap_with = ""
-
+        lr = [1. for i in range(50)]
         for t in t_iterator:
 
             # -> inference
@@ -676,31 +724,27 @@ class PCTrainer(object):
                     # optimize_inputs
                     if is_optimize_inputs:
                         # convert inputs to nn.Parameter
-                        assert not is_unwrap_inputs, "is_optimize_inputs should not be used with is_unwrap_inputs=True"
                         self.inputs = torch.nn.Parameter(self.inputs, True)
 
             # forward
             if unwrap_with == "":
-                outputs = self._model(self.inputs)
+                outputs = self._model(self.inputs).clone()
             elif unwrap_with == "*":
-                outputs = self._model(*self.inputs)
+                outputs = self._model(*self.inputs).clone()
             elif unwrap_with == "**":
-                outputs = self._model(**self.inputs)
+                outputs = self._model(**self.inputs).clone()
             else:
                 raise NotImplementedError
 
             # at_batch_start
             if t == 0:
-
                 if is_model_has_pc_layers:
-
                     # sample_x
                     if is_sample_x_at_batch_start:
                         # after sample_x, optimizer_x will be reset
                         self.recreate_optimize_x()
 
                     else:
-
                         # explicitly asked to reset optimizer_x
                         if is_reset_optimizer_x_at_batch_start:
                             self.recreate_optimize_x()
@@ -722,6 +766,10 @@ class PCTrainer(object):
             if is_return_results_every_t or t == (self._T - 1):
                 if is_return_outputs:
                     results["outputs"].append(outputs)
+                if is_return_representations:
+                    results["representations"].append(self.get_model_representations().clone().detach().cpu())
+                if is_return_xs:
+                    results["xs"].append(self.get_model_xs_copy())
 
             # loss
             if loss_fn is not None:
@@ -733,15 +781,12 @@ class PCTrainer(object):
 
             # energy
             if is_model_has_pc_layers:
-
                 energy = sum(
                     self.get_energies(is_per_datapoint=False)
                 )
-
                 if is_clear_energy_after_use:
                     for pc_layer in model_pc_layers:
                         pc_layer.clear_energy()
-
                 if is_return_results_every_t or t == (self._T - 1):
                     results["energy"].append(
                         energy.item()
@@ -787,6 +832,12 @@ class PCTrainer(object):
                 overalls.append(overall)
             if is_return_results_every_t or t == (self._T - 1):
                 results["overall"].append(overall.item())
+                if is_return_batchelement_loss:
+                    energies_elem = self.get_energies(is_per_datapoint=True)
+                    loss_kwargs_tmp = copy.deepcopy(loss_fn_kwargs)
+                    loss_kwargs_tmp["_reduction"] = 'none'
+                    loss_elem = loss_fn(outputs, **loss_kwargs_tmp).sum(-1)
+                    results["overall_elementwise"] = sum(energies_elem).squeeze() + loss_elem
 
             # early_stop
             early_stop = eval(self._early_stop_condition)
@@ -797,8 +848,13 @@ class PCTrainer(object):
                     self._optimizer_x.zero_grad()
 
             # _optimizer_p: zero_grad
-            if (t in self._update_p_at) or (early_stop and self._update_p_at_early_stop):
+            if ((t in self._update_p_at) or (early_stop and self._update_p_at_early_stop)) and (t not in self._accumulate_p_at):
                 self._optimizer_p.zero_grad()
+
+            # _optimizer_p: zero_grad at beginning of accumulation
+            if self._accumulate_p_at!=[]:
+                if t == self._accumulate_p_at[0]:
+                    self._optimizer_p.zero_grad()
 
             # backward
             overall.backward(**backward_kwargs)
@@ -811,7 +867,8 @@ class PCTrainer(object):
             # x_lr_discount
             # x_lr_amplifier
             if is_model_has_pc_layers:
-
+                lr.append(self._optimizer_x.param_groups[0]['lr'])
+                del lr[0]
                 if t in self._update_x_at:
 
                     # optimizer_x
@@ -822,7 +879,6 @@ class PCTrainer(object):
                     if is_dynamic_x_lr:
 
                         if len(overalls) >= 2:
-
                             if not (overalls[-1] < overalls[-2]):
                                 # x_lr_discount
                                 if self._x_lr_discount < 1.0:
@@ -832,7 +888,6 @@ class PCTrainer(object):
                                         ] = self._optimizer_x.param_groups[param_group_i][
                                             'lr'
                                         ] * self._x_lr_discount
-
                             else:
                                 # x_lr_amplifier
                                 if self._x_lr_amplifier > 1.0:
@@ -845,8 +900,11 @@ class PCTrainer(object):
 
             # optimizer_p: step
             if (t in self._update_p_at) or (early_stop and self._update_p_at_early_stop):
+                if self._accumulate_p_at!=[]:
+                    params = self.get_model_parameters()
+                    for param in params:
+                        param.grad = param.grad/(len(self._accumulate_p_at))
                 self._optimizer_p.step()
-
             # callback_after_t
             if callback_after_t is not None:
                 callback_after_t(t, **callback_after_t_kwargs)
@@ -923,11 +981,9 @@ class PCTrainer(object):
 
             if (isinstance(self._plot_progress_at, str) and self._plot_progress_at == "all") or (isinstance(self._plot_progress_at, list) and len(self._plot_progress_at) > 0 and self._h == max(self._plot_progress_at)):
 
-                input(
-                    "Is plot progress at {}? (Set plot_progress_at=[] in creation of pc_trainer to disable this. )".format(
-                        self._h
-                    )
-                )
+                # from PyInquirer import prompt
+               
+                input("Is plot progress at {}? (Set plot_progress_at=[] in creation of pc_trainer to disable this. )".format(self._h))
 
                 working_home = os.environ.get('WORKING_HOME')
                 if working_home is None:
