@@ -838,3 +838,1286 @@ Traceback (most recent call last):
     raise CalledProcessError(retcode, process.args,
 subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
 2024-08-22 08:00:29,924 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:00:30,245 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:30,325 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:00:31,250 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:31,585 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:00:32,209 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:00:32,210 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:00:32,210 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:00:32,211 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:00:32,255 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:32,937 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:00:33,256 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:33,689 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:00:33,940 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:00:34,258 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:35,263 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:35,790 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:00:36,014 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:00:36,267 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:36,335 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:00:36,336 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:00:36,336 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:00:36,337 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:00:36,941 DEBUG   SenderThread:85275 [sender.py:send():391] send: stats
+2024-08-22 08:00:36,956 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:00:37,272 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:37,899 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:00:37,960 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:00:38,276 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:39,278 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:40,051 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:00:40,200 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:00:40,200 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:00:40,200 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:00:40,201 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:00:40,283 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:40,975 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:00:40,985 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-22 08:00:40,985 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: stop_status
+2024-08-22 08:00:41,280 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:00:41,288 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:41,978 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:00:42,281 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:00:42,293 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:43,294 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:43,616 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:00:43,617 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:00:43,617 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:00:43,617 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:00:44,014 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:00:44,014 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:00:44,297 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:44,401 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:00:45,301 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:46,306 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:46,505 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:00:47,027 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:00:47,309 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:47,327 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:00:47,328 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:00:47,328 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:00:47,329 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:00:48,028 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:00:48,028 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:00:48,311 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:48,612 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:00:49,314 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:50,319 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:50,717 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:00:50,762 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:00:50,763 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:00:50,763 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:00:50,763 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:00:51,040 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:00:51,323 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:52,029 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:00:52,041 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:00:52,326 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:52,820 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:00:53,328 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:53,940 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:00:53,940 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:00:53,940 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:00:53,941 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:00:54,051 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:00:54,333 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:54,927 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:00:55,334 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:55,990 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-22 08:00:55,992 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: stop_status
+2024-08-22 08:00:56,060 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:00:56,335 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:57,056 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:00:57,315 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:00:57,341 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:57,382 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:00:57,382 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:00:57,382 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:00:57,383 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:00:58,064 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:00:58,064 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:00:58,342 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:00:59,163 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:00:59,347 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:00,351 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:00,818 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:01:00,819 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:01:00,819 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:01:00,819 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:01:01,076 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:01:01,121 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:01:01,121 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:01:01,121 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:01:01,122 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:01:01,265 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:01,356 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:02,082 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:01:02,082 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:01:02,360 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:03,128 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:01:03,360 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:03,371 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:03,537 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:01:03,538 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:01:03,538 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:01:03,538 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:01:04,091 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:01:04,366 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:05,371 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:05,480 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:06,094 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:01:06,363 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:01:06,364 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:01:06,364 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:01:06,364 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:01:06,374 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:06,941 DEBUG   SenderThread:85275 [sender.py:send():391] send: stats
+2024-08-22 08:01:07,098 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:01:07,379 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:07,595 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:08,103 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:01:08,381 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:08,950 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:01:09,359 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:01:09,359 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:01:09,359 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:01:09,360 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:01:09,383 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:09,709 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:10,109 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:01:10,109 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:01:10,386 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:10,994 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-22 08:01:10,994 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: stop_status
+2024-08-22 08:01:11,390 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:11,819 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:12,394 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:13,398 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:13,937 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:14,347 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:01:14,401 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:15,283 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:01:15,283 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:01:15,283 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:01:15,284 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:01:15,406 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:16,040 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:16,141 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:01:16,141 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:01:16,410 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:17,415 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:17,817 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:01:17,818 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:01:17,818 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:01:17,818 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:01:18,143 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:18,147 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:01:18,417 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:19,422 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:19,823 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:01:20,153 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:01:20,266 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:20,423 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:21,423 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:22,409 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:22,428 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:22,982 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:01:22,983 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:01:22,983 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:01:22,983 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:01:23,170 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:01:23,433 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:24,173 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:01:24,434 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:24,516 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:24,994 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:01:25,436 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:25,994 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-22 08:01:25,994 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: stop_status
+2024-08-22 08:01:26,439 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:26,625 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:27,445 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:28,450 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:28,731 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:29,454 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:30,249 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:01:30,249 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:01:30,249 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:01:30,249 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:01:30,250 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:01:30,459 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:30,870 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:31,207 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:01:31,460 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:32,212 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:01:32,461 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:32,980 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:33,463 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:33,486 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:01:33,486 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:01:33,486 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:01:33,486 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:01:34,216 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:01:34,216 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:01:34,468 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:35,098 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:35,470 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:35,494 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:01:36,475 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:36,946 DEBUG   SenderThread:85275 [sender.py:send():391] send: stats
+2024-08-22 08:01:37,210 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:37,477 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:38,479 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:39,322 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:39,483 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:40,488 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:40,965 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:01:40,998 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-22 08:01:40,998 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: stop_status
+2024-08-22 08:01:41,428 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:41,489 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:42,239 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:01:42,240 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:01:42,240 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:01:42,241 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:01:42,251 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:01:42,491 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:43,492 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:43,538 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:44,261 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:01:44,497 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:45,502 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:45,646 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:46,071 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:01:46,506 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:47,511 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:47,757 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:48,513 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:49,518 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:49,873 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:50,520 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:51,075 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:01:51,504 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:01:51,505 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:01:51,505 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:01:51,505 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:01:51,525 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:51,993 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:52,292 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:01:52,293 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:01:52,527 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:53,532 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:54,110 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:54,537 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:55,541 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:55,998 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-22 08:01:55,998 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: stop_status
+2024-08-22 08:01:56,227 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:56,399 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:01:56,546 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:57,547 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:58,368 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:01:58,551 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:01:59,552 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:00,477 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:00,556 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:01,558 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:02,085 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:02:02,271 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:02:02,272 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:02:02,272 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:02:02,273 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:02:02,333 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:02:02,563 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:02,587 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:03,568 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:04,343 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:02:04,575 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:04,693 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:05,580 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:06,580 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:06,808 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:06,946 DEBUG   SenderThread:85275 [sender.py:send():391] send: stats
+2024-08-22 08:02:07,585 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:07,952 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:02:08,568 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:02:08,568 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:02:08,568 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:02:08,568 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:02:08,587 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:08,915 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:09,365 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:02:09,589 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:10,370 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:02:10,590 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:10,999 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-22 08:02:11,000 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: stop_status
+2024-08-22 08:02:11,018 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:11,332 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:02:11,381 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:02:11,381 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:02:11,382 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:02:11,591 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:12,380 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:02:12,381 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:02:12,595 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:13,132 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:13,389 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:02:13,599 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:14,265 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:02:14,266 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:02:14,266 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:02:14,266 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:02:14,390 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:02:14,600 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:15,242 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:15,604 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:16,393 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:02:16,609 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:17,170 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:02:17,170 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:02:17,170 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:02:17,170 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:02:17,344 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:17,399 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:02:17,615 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:18,404 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:02:18,620 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:19,176 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:02:19,450 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:19,625 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:19,714 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:02:19,715 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:02:19,715 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:02:19,715 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:02:20,407 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:02:20,407 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:02:20,630 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:21,555 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:21,635 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:22,638 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:22,675 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:02:22,676 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:02:22,676 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:02:22,677 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:02:23,419 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:02:23,640 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:23,661 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:24,424 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:02:24,645 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:24,687 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:02:25,358 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:02:25,359 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:02:25,359 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:02:25,359 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:02:25,425 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:02:25,650 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:25,768 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:26,004 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-22 08:02:26,004 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: stop_status
+2024-08-22 08:02:26,430 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:02:26,655 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:27,577 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:02:27,577 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:02:27,577 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:02:27,578 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:02:27,655 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:27,875 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:28,439 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:02:28,660 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:29,661 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:29,982 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:30,190 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:02:30,190 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:02:30,190 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:02:30,190 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:02:30,191 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:02:30,447 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:02:30,447 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:02:30,663 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:31,667 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:32,087 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:32,455 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:02:32,673 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:32,897 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:02:32,897 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:02:32,897 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:02:32,898 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:02:33,028 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:02:33,028 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:02:33,028 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:02:33,028 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:02:33,455 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:02:33,673 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:34,196 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:34,460 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:02:34,676 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:35,680 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:35,809 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:02:35,810 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:02:35,810 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:02:35,810 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:02:35,810 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:02:36,303 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:36,467 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:02:36,682 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:36,949 DEBUG   SenderThread:85275 [sender.py:send():391] send: stats
+2024-08-22 08:02:37,682 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:38,365 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:02:38,365 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:02:38,365 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:02:38,366 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:02:38,407 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:38,477 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:02:38,477 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:02:38,687 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:39,692 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:40,484 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:02:40,519 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:40,697 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:41,008 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-22 08:02:41,009 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: stop_status
+2024-08-22 08:02:41,234 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:02:41,444 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:02:41,444 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:02:41,445 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:02:41,446 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:02:41,484 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:02:41,702 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:42,484 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:02:42,623 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:42,705 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:43,707 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:43,806 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:02:43,806 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:02:43,806 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:02:43,807 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:02:44,490 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:02:44,712 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:44,728 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:45,715 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:46,248 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:02:46,248 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:02:46,248 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:02:46,249 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:02:46,497 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:02:46,497 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:02:46,718 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:46,834 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:47,253 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:02:47,723 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:48,427 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:02:48,428 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:02:48,428 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:02:48,428 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:02:48,500 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:02:48,500 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:02:48,724 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:48,938 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:49,729 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:50,506 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:02:50,734 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:51,043 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:51,553 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:02:51,553 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:02:51,553 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:02:51,554 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:02:51,738 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:52,515 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:02:52,515 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:02:52,556 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:02:52,739 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:53,146 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:53,741 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:54,245 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:02:54,246 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:02:54,246 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:02:54,247 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:02:54,522 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:02:54,746 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:55,252 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:55,748 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:56,013 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-22 08:02:56,013 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: stop_status
+2024-08-22 08:02:56,529 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:02:56,753 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:02:57,356 ERROR   gpuapple  :85275 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jackmontgomery/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jackmontgomery/anaconda3/lib/python3.11/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 08:02:57,419 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-22 08:02:57,419 DEBUG   SenderThread:85275 [sender.py:send():391] send: history
+2024-08-22 08:02:57,419 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: server_info
+2024-08-22 08:02:57,419 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: summary_record
+2024-08-22 08:02:57,420 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:02:57,420 DEBUG   SenderThread:85275 [sender.py:send():391] send: telemetry
+2024-08-22 08:02:57,420 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: server_info
+2024-08-22 08:02:57,535 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:02:57,890 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:02:57,891 DEBUG   SenderThread:85275 [sender.py:send():391] send: exit
+2024-08-22 08:02:57,891 INFO    SenderThread:85275 [sender.py:send_exit():598] handling exit code: 0
+2024-08-22 08:02:57,892 INFO    SenderThread:85275 [sender.py:send_exit():600] handling runtime: 230
+2024-08-22 08:02:57,892 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:02:57,893 INFO    SenderThread:85275 [sender.py:send_exit():606] send defer
+2024-08-22 08:02:57,893 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 08:02:57,893 INFO    HandlerThread:85275 [handler.py:handle_request_defer():184] handle defer: 0
+2024-08-22 08:02:57,894 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: defer
+2024-08-22 08:02:57,894 INFO    SenderThread:85275 [sender.py:send_request_defer():622] handle sender defer: 0
+2024-08-22 08:02:57,894 INFO    SenderThread:85275 [sender.py:transition_state():626] send defer: 1
+2024-08-22 08:02:57,894 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 08:02:57,894 INFO    HandlerThread:85275 [handler.py:handle_request_defer():184] handle defer: 1
+2024-08-22 08:02:57,894 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: defer
+2024-08-22 08:02:57,894 INFO    SenderThread:85275 [sender.py:send_request_defer():622] handle sender defer: 1
+2024-08-22 08:02:57,894 INFO    SenderThread:85275 [sender.py:transition_state():626] send defer: 2
+2024-08-22 08:02:57,894 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 08:02:57,895 INFO    HandlerThread:85275 [handler.py:handle_request_defer():184] handle defer: 2
+2024-08-22 08:02:57,895 INFO    HandlerThread:85275 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 08:02:57,895 DEBUG   SystemMonitor:85275 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 08:02:57,895 DEBUG   SystemMonitor:85275 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 08:02:57,895 INFO    HandlerThread:85275 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 08:02:57,896 INFO    HandlerThread:85275 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 08:02:57,896 INFO    HandlerThread:85275 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 08:02:57,896 INFO    HandlerThread:85275 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 08:02:57,896 INFO    HandlerThread:85275 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 08:02:57,897 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: defer
+2024-08-22 08:02:57,897 INFO    SenderThread:85275 [sender.py:send_request_defer():622] handle sender defer: 2
+2024-08-22 08:02:57,897 INFO    SenderThread:85275 [sender.py:transition_state():626] send defer: 3
+2024-08-22 08:02:57,897 DEBUG   SenderThread:85275 [sender.py:send():391] send: stats
+2024-08-22 08:02:57,897 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 08:02:57,897 INFO    HandlerThread:85275 [handler.py:handle_request_defer():184] handle defer: 3
+2024-08-22 08:02:57,897 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: defer
+2024-08-22 08:02:57,897 INFO    SenderThread:85275 [sender.py:send_request_defer():622] handle sender defer: 3
+2024-08-22 08:02:57,897 INFO    SenderThread:85275 [sender.py:transition_state():626] send defer: 4
+2024-08-22 08:02:57,897 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 08:02:57,898 INFO    HandlerThread:85275 [handler.py:handle_request_defer():184] handle defer: 4
+2024-08-22 08:02:57,898 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: defer
+2024-08-22 08:02:57,898 INFO    SenderThread:85275 [sender.py:send_request_defer():622] handle sender defer: 4
+2024-08-22 08:02:57,898 INFO    SenderThread:85275 [sender.py:transition_state():626] send defer: 5
+2024-08-22 08:02:57,898 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 08:02:57,898 INFO    HandlerThread:85275 [handler.py:handle_request_defer():184] handle defer: 5
+2024-08-22 08:02:57,898 DEBUG   SenderThread:85275 [sender.py:send():391] send: summary
+2024-08-22 08:02:57,899 INFO    SenderThread:85275 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 08:02:57,899 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: defer
+2024-08-22 08:02:57,899 INFO    SenderThread:85275 [sender.py:send_request_defer():622] handle sender defer: 5
+2024-08-22 08:02:57,899 INFO    SenderThread:85275 [sender.py:transition_state():626] send defer: 6
+2024-08-22 08:02:57,899 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 08:02:57,899 INFO    HandlerThread:85275 [handler.py:handle_request_defer():184] handle defer: 6
+2024-08-22 08:02:57,899 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: defer
+2024-08-22 08:02:57,899 INFO    SenderThread:85275 [sender.py:send_request_defer():622] handle sender defer: 6
+2024-08-22 08:02:57,902 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:02:58,185 INFO    SenderThread:85275 [sender.py:transition_state():626] send defer: 7
+2024-08-22 08:02:58,186 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 08:02:58,186 INFO    HandlerThread:85275 [handler.py:handle_request_defer():184] handle defer: 7
+2024-08-22 08:02:58,186 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: defer
+2024-08-22 08:02:58,186 INFO    SenderThread:85275 [sender.py:send_request_defer():622] handle sender defer: 7
+2024-08-22 08:02:58,540 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:02:58,541 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:02:58,541 INFO    Thread-12 :85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/config.yaml
+2024-08-22 08:02:58,894 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-22 08:03:02,075 INFO    SenderThread:85275 [sender.py:transition_state():626] send defer: 8
+2024-08-22 08:03:02,075 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: poll_exit
+2024-08-22 08:03:02,075 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 08:03:02,076 INFO    HandlerThread:85275 [handler.py:handle_request_defer():184] handle defer: 8
+2024-08-22 08:03:02,076 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: defer
+2024-08-22 08:03:02,076 INFO    SenderThread:85275 [sender.py:send_request_defer():622] handle sender defer: 8
+2024-08-22 08:03:02,076 INFO    SenderThread:85275 [job_builder.py:build():440] Attempting to build job artifact
+2024-08-22 08:03:02,077 INFO    SenderThread:85275 [job_builder.py:_get_source_type():569] is repo sourced job
+2024-08-22 08:03:02,077 INFO    SenderThread:85275 [job_builder.py:_get_program_relpath():587] run is notebook based run
+2024-08-22 08:03:02,077 WARNING SenderThread:85275 [job_builder.py:_log_if_verbose():274] Source type is set to 'repo' but some required information is missing from the environment. A job will not be created from this run. See https://docs.wandb.ai/guides/launch/create-job
+2024-08-22 08:03:02,077 INFO    SenderThread:85275 [sender.py:transition_state():626] send defer: 9
+2024-08-22 08:03:02,077 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 08:03:02,077 INFO    HandlerThread:85275 [handler.py:handle_request_defer():184] handle defer: 9
+2024-08-22 08:03:02,077 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: defer
+2024-08-22 08:03:02,077 INFO    SenderThread:85275 [sender.py:send_request_defer():622] handle sender defer: 9
+2024-08-22 08:03:02,077 INFO    SenderThread:85275 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-08-22 08:03:02,556 INFO    SenderThread:85275 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:03:02,556 INFO    SenderThread:85275 [dir_watcher.py:finish():388] scan: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files
+2024-08-22 08:03:02,557 INFO    SenderThread:85275 [dir_watcher.py:finish():402] scan save: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/requirements.txt requirements.txt
+2024-08-22 08:03:02,557 INFO    SenderThread:85275 [dir_watcher.py:finish():402] scan save: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log output.log
+2024-08-22 08:03:02,558 INFO    SenderThread:85275 [dir_watcher.py:finish():402] scan save: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/config.yaml config.yaml
+2024-08-22 08:03:02,562 INFO    SenderThread:85275 [dir_watcher.py:finish():402] scan save: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json wandb-summary.json
+2024-08-22 08:03:02,564 INFO    SenderThread:85275 [dir_watcher.py:finish():402] scan save: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/conda-environment.yaml conda-environment.yaml
+2024-08-22 08:03:02,565 INFO    SenderThread:85275 [dir_watcher.py:finish():402] scan save: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-metadata.json wandb-metadata.json
+2024-08-22 08:03:02,567 INFO    SenderThread:85275 [sender.py:transition_state():626] send defer: 10
+2024-08-22 08:03:02,569 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 08:03:02,570 INFO    HandlerThread:85275 [handler.py:handle_request_defer():184] handle defer: 10
+2024-08-22 08:03:02,570 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: defer
+2024-08-22 08:03:02,571 INFO    SenderThread:85275 [sender.py:send_request_defer():622] handle sender defer: 10
+2024-08-22 08:03:02,571 INFO    SenderThread:85275 [file_pusher.py:finish():169] shutting down file pusher
+2024-08-22 08:03:02,906 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-22 08:03:02,907 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: poll_exit
+2024-08-22 08:03:02,907 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 08:03:03,295 INFO    wandb-upload_0:85275 [upload_job.py:push():130] Uploaded file /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/requirements.txt
+2024-08-22 08:03:03,565 INFO    wandb-upload_1:85275 [upload_job.py:push():130] Uploaded file /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/output.log
+2024-08-22 08:03:03,595 INFO    wandb-upload_2:85275 [upload_job.py:push():130] Uploaded file /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/config.yaml
+2024-08-22 08:03:03,794 INFO    wandb-upload_4:85275 [upload_job.py:push():130] Uploaded file /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/conda-environment.yaml
+2024-08-22 08:03:03,910 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-22 08:03:03,910 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: poll_exit
+2024-08-22 08:03:04,345 INFO    wandb-upload_3:85275 [upload_job.py:push():130] Uploaded file /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/files/wandb-summary.json
+2024-08-22 08:03:04,551 INFO    Thread-11 (_thread_body):85275 [sender.py:transition_state():626] send defer: 11
+2024-08-22 08:03:04,551 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 08:03:04,551 INFO    HandlerThread:85275 [handler.py:handle_request_defer():184] handle defer: 11
+2024-08-22 08:03:04,551 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: defer
+2024-08-22 08:03:04,551 INFO    SenderThread:85275 [sender.py:send_request_defer():622] handle sender defer: 11
+2024-08-22 08:03:04,551 INFO    SenderThread:85275 [file_pusher.py:join():175] waiting for file pusher
+2024-08-22 08:03:04,551 INFO    SenderThread:85275 [sender.py:transition_state():626] send defer: 12
+2024-08-22 08:03:04,551 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 08:03:04,551 INFO    HandlerThread:85275 [handler.py:handle_request_defer():184] handle defer: 12
+2024-08-22 08:03:04,551 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: defer
+2024-08-22 08:03:04,551 INFO    SenderThread:85275 [sender.py:send_request_defer():622] handle sender defer: 12
+2024-08-22 08:03:04,551 INFO    SenderThread:85275 [file_stream.py:finish():601] file stream finish called
+2024-08-22 08:03:04,911 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-22 08:03:05,293 INFO    SenderThread:85275 [file_stream.py:finish():605] file stream finish is done
+2024-08-22 08:03:05,294 INFO    SenderThread:85275 [sender.py:transition_state():626] send defer: 13
+2024-08-22 08:03:05,294 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: poll_exit
+2024-08-22 08:03:05,294 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 08:03:05,294 INFO    HandlerThread:85275 [handler.py:handle_request_defer():184] handle defer: 13
+2024-08-22 08:03:05,295 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: defer
+2024-08-22 08:03:05,295 INFO    SenderThread:85275 [sender.py:send_request_defer():622] handle sender defer: 13
+2024-08-22 08:03:05,295 INFO    SenderThread:85275 [sender.py:transition_state():626] send defer: 14
+2024-08-22 08:03:05,295 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 08:03:05,295 INFO    HandlerThread:85275 [handler.py:handle_request_defer():184] handle defer: 14
+2024-08-22 08:03:05,295 DEBUG   SenderThread:85275 [sender.py:send():391] send: final
+2024-08-22 08:03:05,295 DEBUG   SenderThread:85275 [sender.py:send():391] send: footer
+2024-08-22 08:03:05,296 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: defer
+2024-08-22 08:03:05,296 INFO    SenderThread:85275 [sender.py:send_request_defer():622] handle sender defer: 14
+2024-08-22 08:03:05,297 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-22 08:03:05,297 DEBUG   SenderThread:85275 [sender.py:send_request():418] send_request: poll_exit
+2024-08-22 08:03:05,298 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 08:03:05,299 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: get_summary
+2024-08-22 08:03:05,299 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: sampled_history
+2024-08-22 08:03:05,301 DEBUG   HandlerThread:85275 [handler.py:handle_request():158] handle_request: shutdown
+2024-08-22 08:03:05,301 INFO    HandlerThread:85275 [handler.py:finish():882] shutting down handler
+2024-08-22 08:03:06,300 INFO    WriterThread:85275 [datastore.py:close():296] close: /Users/jackmontgomery/Desktop/UCT/Research_Project/deep-predictive-active-inference/wandb/run-20240822_075903-swfaq5hh/run-swfaq5hh.wandb
+2024-08-22 08:03:06,300 INFO    SenderThread:85275 [sender.py:finish():1631] shutting down sender
+2024-08-22 08:03:06,301 INFO    SenderThread:85275 [file_pusher.py:finish():169] shutting down file pusher
+2024-08-22 08:03:06,301 INFO    SenderThread:85275 [file_pusher.py:join():175] waiting for file pusher

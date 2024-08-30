@@ -29,3 +29,13 @@ config: {'env_name': 'CartPole-v1', 'buffer_size': 1000, 'batch_size': 64, 'gamm
 2024-08-22 07:59:10,963 INFO    MainThread:85132 [wandb_run.py:_redirect():2323] Wrapping output streams.
 2024-08-22 07:59:10,963 INFO    MainThread:85132 [wandb_run.py:_redirect():2348] Redirects installed.
 2024-08-22 07:59:10,964 INFO    MainThread:85132 [wandb_init.py:init():843] run started, returning control to user process
+2024-08-22 08:02:57,418 INFO    MainThread:85132 [wandb_run.py:_finish():2110] finishing run jackbmontgomery-university-of-cape-town/supervised-predictive-coding/swfaq5hh
+2024-08-22 08:02:57,419 INFO    MainThread:85132 [jupyter.py:save_history():444] not saving jupyter history
+2024-08-22 08:02:57,419 INFO    MainThread:85132 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-08-22 08:02:57,419 INFO    MainThread:85132 [wandb_init.py:_jupyter_teardown():449] cleaning up jupyter logic
+2024-08-22 08:02:57,419 INFO    MainThread:85132 [wandb_run.py:_atexit_cleanup():2377] got exitcode: 0
+2024-08-22 08:02:57,419 INFO    MainThread:85132 [wandb_run.py:_restore():2355] restore
+2024-08-22 08:02:57,419 INFO    MainThread:85132 [wandb_run.py:_restore():2361] restore done
+2024-08-22 08:03:06,303 INFO    MainThread:85132 [wandb_run.py:_footer_history_summary_info():4035] rendering history
+2024-08-22 08:03:06,303 INFO    MainThread:85132 [wandb_run.py:_footer_history_summary_info():4067] rendering summary
+2024-08-22 08:03:06,312 INFO    MainThread:85132 [wandb_run.py:_footer_sync_info():3994] logging synced files

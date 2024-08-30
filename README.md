@@ -24,3 +24,12 @@
 - Agents do not want illuminated blocks but to remove them they need to both be on each of them
 
 If I was in their position what would I do / what would I think about myself
+
+## Thoughts
+
+1. PC
+2. Hieracichal might not be neccesary
+3. PC -> Temporal
+4. Learning
+
+Action
