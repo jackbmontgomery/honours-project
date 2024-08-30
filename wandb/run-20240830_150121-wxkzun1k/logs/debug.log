@@ -1,0 +1,34 @@
+2024-08-30 15:01:21,706 INFO    MainThread:91682 [wandb_setup.py:_flush():77] Current SDK version is 0.17.8
+2024-08-30 15:01:21,706 INFO    MainThread:91682 [wandb_setup.py:_flush():77] Configure stats pid to 91682
+2024-08-30 15:01:21,706 INFO    MainThread:91682 [wandb_setup.py:_flush():77] Loading settings from /Users/jackmontgomery/.config/wandb/settings
+2024-08-30 15:01:21,706 INFO    MainThread:91682 [wandb_setup.py:_flush():77] Loading settings from /Users/jackmontgomery/Desktop/UCT/Research_Project/active-temporal-predictive-coding/wandb/settings
+2024-08-30 15:01:21,706 INFO    MainThread:91682 [wandb_setup.py:_flush():77] Loading settings from environment variables: {}
+2024-08-30 15:01:21,706 INFO    MainThread:91682 [wandb_setup.py:_flush():77] Applying setup settings: {'_disable_service': False}
+2024-08-30 15:01:21,706 INFO    MainThread:91682 [wandb_setup.py:_flush():77] Inferring run settings from compute environment: {'program_relpath': 'atpc.py', 'program_abspath': '/Users/jackmontgomery/Desktop/UCT/Research_Project/active-temporal-predictive-coding/atpc.py', 'program': '/Users/jackmontgomery/Desktop/UCT/Research_Project/active-temporal-predictive-coding/atpc.py'}
+2024-08-30 15:01:21,706 INFO    MainThread:91682 [wandb_setup.py:_flush():77] Applying login settings: {}
+2024-08-30 15:01:21,707 INFO    MainThread:91682 [wandb_init.py:_log_setup():524] Logging user logs to /Users/jackmontgomery/Desktop/UCT/Research_Project/active-temporal-predictive-coding/wandb/run-20240830_150121-wxkzun1k/logs/debug.log
+2024-08-30 15:01:21,707 INFO    MainThread:91682 [wandb_init.py:_log_setup():525] Logging internal logs to /Users/jackmontgomery/Desktop/UCT/Research_Project/active-temporal-predictive-coding/wandb/run-20240830_150121-wxkzun1k/logs/debug-internal.log
+2024-08-30 15:01:21,707 INFO    MainThread:91682 [wandb_init.py:init():607] calling init triggers
+2024-08-30 15:01:21,707 INFO    MainThread:91682 [wandb_init.py:init():614] wandb.init called with sweep_config: {}
+config: {'env_id': 'CartPole-v1', 'tao': 0.1, 'eta': 0.9, 'inference_iterations': 10}
+2024-08-30 15:01:21,707 INFO    MainThread:91682 [wandb_init.py:init():657] starting backend
+2024-08-30 15:01:21,707 INFO    MainThread:91682 [wandb_init.py:init():661] setting up manager
+2024-08-30 15:01:21,709 INFO    MainThread:91682 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2024-08-30 15:01:21,711 INFO    MainThread:91682 [wandb_init.py:init():669] backend started and connected
+2024-08-30 15:01:21,715 INFO    MainThread:91682 [wandb_init.py:init():767] updated telemetry
+2024-08-30 15:01:21,758 INFO    MainThread:91682 [wandb_init.py:init():800] communicating run to backend with 90.0 second timeout
+2024-08-30 15:01:23,082 INFO    MainThread:91682 [wandb_init.py:init():851] starting run threads in backend
+2024-08-30 15:01:24,047 INFO    MainThread:91682 [wandb_run.py:_console_start():2463] atexit reg
+2024-08-30 15:01:24,048 INFO    MainThread:91682 [wandb_run.py:_redirect():2309] redirect: wrap_raw
+2024-08-30 15:01:24,048 INFO    MainThread:91682 [wandb_run.py:_redirect():2374] Wrapping output streams.
+2024-08-30 15:01:24,048 INFO    MainThread:91682 [wandb_run.py:_redirect():2399] Redirects installed.
+2024-08-30 15:01:24,051 INFO    MainThread:91682 [wandb_init.py:init():894] run started, returning control to user process
+2024-08-30 15:01:39,978 INFO    MainThread:91682 [wandb_run.py:_finish():2160] finishing run jackbmontgomery-university-of-cape-town/active-temporal-predictive-coding/wxkzun1k
+2024-08-30 15:01:39,978 INFO    MainThread:91682 [wandb_run.py:_atexit_cleanup():2424] got exitcode: 0
+2024-08-30 15:01:39,978 INFO    MainThread:91682 [wandb_run.py:_restore():2406] restore
+2024-08-30 15:01:39,978 INFO    MainThread:91682 [wandb_run.py:_restore():2412] restore done
+2024-08-30 15:01:39,978 INFO    MainThread:91682 [wandb_run.py:_on_finish():2677] communicating current version
+2024-08-30 15:01:40,198 INFO    MainThread:91682 [wandb_run.py:_on_finish():2686] got version response 
+2024-08-30 15:01:45,952 INFO    MainThread:91682 [wandb_run.py:_footer_history_summary_info():4078] rendering history
+2024-08-30 15:01:45,953 INFO    MainThread:91682 [wandb_run.py:_footer_history_summary_info():4110] rendering summary
+2024-08-30 15:01:45,961 INFO    MainThread:91682 [wandb_run.py:_footer_sync_info():4037] logging synced files

@@ -1,0 +1,45 @@
+{
+    "os": "macOS-14.5-arm64-i386-64bit",
+    "python": "3.10.14",
+    "heartbeatAt": "2024-08-30T13:01:23.110703",
+    "startedAt": "2024-08-30T13:01:21.701057",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/jackmontgomery/Desktop/UCT/Research_Project/active-temporal-predictive-coding/atpc.py",
+    "codePathLocal": "atpc.py",
+    "codePath": "atpc.py",
+    "git": {
+        "remote": "https://github.com/jackbmontgomery/active-temporal-predictive-coding.git",
+        "commit": "f1d597abd733b798f94e4b6089855d7171b92a05"
+    },
+    "email": "jackbmontgomery2001@gmail.com",
+    "root": "/Users/jackmontgomery/Desktop/UCT/Research_Project/active-temporal-predictive-coding",
+    "host": "Jacks-MacBook-Pro-2.local",
+    "username": "jackmontgomery",
+    "executable": "/Users/jackmontgomery/anaconda3/envs/tpc/bin/python3",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 3204,
+        "min": 600,
+        "max": 3204
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3204,
+            "min": 600,
+            "max": 3204
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 228.27386474609375,
+            "used": 12.416740417480469
+        }
+    },
+    "memory": {
+        "total": 16.0
+    }
+}
