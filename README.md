@@ -1,35 +1,17 @@
 # Honours Project
 
-## TODO:
+## Overview:
 
-- Message St John about some questions
-  - Information propogating backwards
-    - Sofisticated Inference
-    - Deep active inference
-  - Creating a model of the other agent for the tranitions
-- Read over VAE for the Deep POMDP
-- Code up deep actinf mdp
+- The control problem - Cartpole - is doing nicely but is very noisy so I think I can do some slowing down of learning over the course of the episode to try and smooth out the returns
+- The Bayesian Thermostat example is going to be a little different because i am going to try and test the model behaviour under noise so I can have some basic proir in the mapping but it will be nice trying to learn some noise
 
-## Draft
+## Update:
 
-- Sections to be contained in final paper
-- Skeleton of the literature review
-  - Which papers will I be using
+- The next step in the implementation is to create a noisy environment
+- Backoff the learning rate in the eta and maybe the step size too
+- Bayesian Thermostat environment
 
-## Thoughts:
+## TPC:
 
-- Agents have no idea how the other is going to move. The encoding of this is done in the B matrix, the transition matrix. Currently, how the state of the agent is changing given its previous state is completely random accoriding to the other agent. This is where we would want to place some model of the other agent
-
-- 2 blocks are illuminated
-- Agents do not want illuminated blocks but to remove them they need to both be on each of them
-
-If I was in their position what would I do / what would I think about myself
-
-## Thoughts
-
-1. PC
-2. Hieracichal might not be neccesary
-3. PC -> Temporal
-4. Learning
-
-Action
+- I am starting to doubt whether there is a need to modify A at all during execution
+- The environment is only subject to change given u
