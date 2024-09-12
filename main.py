@@ -6,16 +6,16 @@ import wandb
 # Run Configs
 
 configs = {
-    'num_episodes': 250,
+    'num_episodes': 1000,
     'env_id': 'CartPole-v1',
-    'tao': 0.2,
-    'eta_start': 0.1,
+    'tao': 0.25,
+    'eta_start': 0.2,
     'eta_min': 0.1,
     'eta_decay': 0.99,
     'inference_iterations': 20,
     'activation': 'sigmoid',
     'numpy_seed': '',
-    'latent_dimension': 8
+    'latent_dimension': 6
 }
 
 env = CartPole()
@@ -53,9 +53,9 @@ else:
 
 # Aux Functions to calculate common values
 
-def calculate_energy(A, B, C, x, sigma_x, y, sigma_y, u, x_prev):
+def calculate_energy(A, B, C, bias, x, sigma_x, y, sigma_y, u, x_prev):
 
-    t1 = (1 / 2) * np.transpose( y - C @ f(x) ) @ sigma_y @ ( y - C @ f(x) )
+    t1 = (1 / 2) * np.transpose( y - C @ f(x) - bias) @ sigma_y @ ( y - C @ f(x) - bias)
 
     t2 = (1 / 2) * np.transpose( x - A @ f(x_prev) - B @ u ) @ sigma_x @ ( x - A @ f(x_prev) - B @ u )
 
@@ -64,29 +64,33 @@ def calculate_energy(A, B, C, x, sigma_x, y, sigma_y, u, x_prev):
 def calculate_ex(A, B, x, sigma_x, u, x_prev):
     return inv(sigma_x) @ ( x - A @ f(x_prev) - B @ u)
 
-def calculate_ey(C, y, sigma_y, x):
-    return inv(sigma_y) @ ( y - C @ f(x) )
+def calculate_ey(C, bias, y, sigma_y, x):
+    return inv(sigma_y) @ ( y - C @ f(x) - bias)
 
 def calculate_qx_grad(C, x, e_x, e_y):
 
     return - e_x + np.multiply(df(x), np.transpose(C) @ e_y)
 
-def update_synaptic_weights(A, B, C, x, x_prev, sigma_x, y, sigma_y, u, eta):
+def update_synaptic_weights(A, B, C, bias, x, x_prev, sigma_x, y, sigma_y, u, eta):
         
     # A
     dA = eta * np.reshape(inv(sigma_x) @ ( x - A @ f(x_prev) - B @ u), (latent_dimension, 1)) @ np.reshape(f(x_prev), (1, latent_dimension))
     # B
     dB = eta * np.reshape(inv(sigma_x) @ ( x - A @ f(x_prev) - B @ u), (latent_dimension, 1)) @ np.reshape(u, (1, control_dimension))
     # C
-    dC = eta * np.reshape(inv(sigma_y) @ ( y - C @ f(x)), (observation_dimension, 1)) @ np.reshape(f(x), (1, latent_dimension))
+    dC = eta * np.reshape(inv(sigma_y) @ ( y - C @ f(x) - bias), (observation_dimension, 1)) @ np.reshape(f(x), (1, latent_dimension))
+    # Bias
+    dBias = eta * np.reshape(inv(sigma_y) @ ( y - C @ f(x) - bias), (observation_dimension, ))
 
     A += tao * dA 
     B += tao * dB 
     C += tao * dC
 
-    return A, B, C
+    bias += tao * dBias
 
-def infer_x(inference_iterations, A, B, C, x_prev, sigma_x, y, sigma_y, u):
+    return A, B, C, bias
+
+def infer_x(inference_iterations, A, B, C, bias, x_prev, sigma_x, y, sigma_y, u):
 
     qx      = [x_prev]
     vfes    = []
@@ -95,23 +99,23 @@ def infer_x(inference_iterations, A, B, C, x_prev, sigma_x, y, sigma_y, u):
 
         e_x = calculate_ex(A, B, qx[-1], sigma_x, u, x_prev)
 
-        e_y = calculate_ey(C, y, sigma_y, qx[-1])
+        e_y = calculate_ey(C, bias, y, sigma_y, qx[-1])
 
         qx_grad = calculate_qx_grad(C, qx[-1], e_x, e_y)
 
         qx.append(qx[-1] + tao * qx_grad)
 
-        vfe = calculate_energy(A, B, C, qx[-1], sigma_x, y, sigma_y, u, x_prev)
+        vfe = calculate_energy(A, B, C, bias, qx[-1], sigma_x, y, sigma_y, u, x_prev)
 
         vfes.append(vfe)
 
     return qx[-1]
 
-def predict_observation(A, B, C, x_prev, u):
+def predict_observation(A, B, C, bias, x_prev, u):
 
     pred_next_x = A @ f(x_prev) + B @ u
 
-    pred_next_y = C @ f(pred_next_x)
+    pred_next_y = C @ f(pred_next_x) + bias
 
     return pred_next_y
 
@@ -129,7 +133,7 @@ def kl_divergence(mu_p, sigma_p, mu_q, sigma_q):
 
     return (1 / 2) * (np.log( det(sigma_q) / det(sigma_p) ) - dim + np.transpose((mu_p - mu_q)) @ inv(sigma_q) @ ( mu_p - mu_q ) + trace(inv(sigma_q) @ sigma_p))
 
-def sample_action(A, B, C, x_prev, sigma_y, biased_mu, biased_cov):
+def sample_action(A, B, C, bias, x_prev, sigma_y, biased_mu, biased_cov):
 
     controls = np.array([-1, 1])
 
@@ -139,10 +143,10 @@ def sample_action(A, B, C, x_prev, sigma_y, biased_mu, biased_cov):
 
         u = np.reshape(u, (control_dimension,))
 
-        pred_y = predict_observation(A, B, C, x_prev, u)
+        pred_y = predict_observation(A, B, C, bias, x_prev, u)
 
         predicted_divergence    = kl_divergence(pred_y, sigma_y, biased_mu, biased_cov)
-        predicted_uncertainty   = gaussian_entropy(C @ f(x_prev), sigma_y)
+        predicted_uncertainty   = gaussian_entropy(C @ f(x_prev) + bias, sigma_y)
 
         efe = np.append(efe, predicted_divergence + predicted_uncertainty)
 
@@ -172,6 +176,8 @@ B = init_weights(latent_dimension, control_dimension)         # Control
 print('B:\n', B)
 C = init_weights(observation_dimension, latent_dimension)     # Observation
 print('C:\n', C)
+
+bias = np.zeros((observation_dimension, ))
 
 # A = np.zeros((latent_dimension, latent_dimension))
 # B = np.zeros((latent_dimension, control_dimension))
@@ -216,9 +222,9 @@ try:
 
             episode_steps += 1
 
-            u, efe_dist = sample_action(A, B, C, x_prev, sigma_y, biased_mu, biased_cov)
+            u, efe_dist = sample_action(A, B, C, bias, x_prev, sigma_y, biased_mu, biased_cov)
 
-            pred_y = predict_observation(A, B, C, x_prev, u)
+            pred_y = predict_observation(A, B, C, bias, x_prev, u)
 
             y, terminated, truncated, info = env.step(u[0])
                 
@@ -226,11 +232,11 @@ try:
 
             # Relax the energy to obtain the estimate for x
 
-            x_tilde = infer_x(inference_iterations, A, B, C, x_prev, sigma_x, y, sigma_y, u)
+            x_tilde = infer_x(inference_iterations, A, B, C, bias, x_prev, sigma_x, y, sigma_y, u)
 
-            A, B, C = update_synaptic_weights(A, B, C, x_tilde, x_prev, sigma_x, y, sigma_y, u, eta)
+            A, B, C, bias = update_synaptic_weights(A, B, C, bias, x_tilde, x_prev, sigma_x, y, sigma_y, u, eta)
 
-            episode_energies.append(calculate_energy(A, B, C, x_tilde, sigma_x, y, sigma_y, u, x_prev))
+            episode_energies.append(calculate_energy(A, B, C, bias, x_tilde, sigma_x, y, sigma_y, u, x_prev))
 
             x_prev = x_tilde
 
@@ -256,3 +262,4 @@ except KeyboardInterrupt:
 print('A:\n', A)
 print('B:\n', B)
 print('C:\n', C)
+print('Bias:\n', bias)
