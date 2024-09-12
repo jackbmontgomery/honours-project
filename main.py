@@ -8,7 +8,7 @@ import wandb
 configs = {
     'num_episodes': 250,
     'env_id': 'CartPole-v1',
-    'tao': 0.5,
+    'tao': 0.2,
     'eta_start': 0.1,
     'eta_min': 0.1,
     'eta_decay': 0.99,
@@ -131,7 +131,7 @@ def kl_divergence(mu_p, sigma_p, mu_q, sigma_q):
 
 def sample_action(A, B, C, x_prev, sigma_y, biased_mu, biased_cov):
 
-    controls = np.array([0, 1])
+    controls = np.array([-1, 1])
 
     efe = np.array([])
 
@@ -192,8 +192,7 @@ biased_mu = np.array([0, 0])
 # biased_mu = np.array([0, 0, 0, 0])
 # biased_mu = np.array([0, 0, 0, 0, 1])
 
-biased_cov = np.array([[1 / 10, 0], 
-                      [0, 1 / 10]])
+biased_cov = np.array([[1, 0], [0, 1 / 10]])
 
 # Training loop
 

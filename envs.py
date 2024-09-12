@@ -39,6 +39,9 @@ class CartPole:
     
     def step(self, action):
 
+        if action == -1:
+            action += 1
+
         obs, _, terminated, truncated, info = self.env.step(action)
 
         obs = self._parse_obs(obs)
