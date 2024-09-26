@@ -1,7 +1,7 @@
 \begin{equation}\label{eq:vfe_low_road}
 	\begin{aligned}
-		\mathcal{F}(Q, y) &=  \int Q(x; \phi) \ln \frac{Q(x; \phi)}{P(x, y; \theta)} \\
-		&= - \ln P(y; \theta) + \int Q(x; \phi) \ln \frac{Q(x; \phi)}{P(x | y; \theta)} \\ 
-		&= - \underbrace{\ln P(y; \theta)}_{\text{Evidence}} + \underbrace{D_{KL}\left[ Q(x; \phi) \,\|\, P(x | y; \theta) \right]}_{\text{Divergence}}
+		\mathcal{F}(q, y) &=  \int q(x; \phi) \ln \frac{q(x; \phi)}{p(x, y; \theta)} \\
+		&= - \ln p(y; \theta) + \int q(x; \phi) \ln \frac{q(x; \phi)}{p(x | y; \theta)} \\ 
+		&= - \underbrace{\ln p(y; \theta)}_{\text{Evidence}} + \underbrace{D_{KL}\left[ q(x; \phi) \,\|\, p(x | y; \theta) \right]}_{\text{Divergence}}
 	\end{aligned}
 \end{equation}
