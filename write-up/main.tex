@@ -37,7 +37,27 @@
 
 \begin{document}
 
-\maketitle
+\begin{titlepage}
+    \centering
+    \vspace*{1in}
+    
+    {\LARGE \textbf{All Things Active Inference}}\\[2cm]
+    
+    {\large \textbf{Jack Montgomery}}\\[0.5cm]
+    {\large MNTJAC003}\\[0.5cm]
+    {\large Supervisor: Prof. Jonathan Shock}\\
+    {\large University of Cape Town}\\[2cm]
+    
+    \includegraphics[width=0.3\textwidth]{images/UCT_logo_circular_blue_large.png}\\[2cm]
+    
+    {\large September 26, 2024}\\[3cm]
+    
+    % Abstract section
+    \begin{abstract}
+INSERT ABSTRACT
+    \end{abstract}
+    
+\end{titlepage}
 
 \newpage
 
@@ -47,49 +67,47 @@
 
 \section{Introduction}
 
-Active inference has gained much prominence as a normative framework for characterising and modelling adaptive behaviour. It has been proposed as a neural process theory \citep{friston2017active}, it has also found application in robotic controls tasks \citep{lanillos2021active}, signal processing \citep{podusenko2022aida} as well as being characterised as variational message passing on a probabilistic graphical model \citep{champion2021realizing}. The difficulty with introducing and discussing a concept that has been applied in so many disciplines is how to stay true to the principled basis that the framework is derived from while demonstrating the applications of it. Further, due to the many different applications of the framework it is often introduced in slightly different language that are ultimately equivalent. These equivalences can make it difficult for someone new to the field to grasp what the framework is fundamentally about. 
+Active inference is a normative framework that characterises adaptive behaviour through the general paradigm of surprise minimisation. The foundation of this framework is the Free Energy Principle (FEP) \citep{friston2006free}, which is proposed as a unifying theory of cognition \citep{friston2010free}. Active inference can similarly be derived from the assumption of the persistence of biological systems \citep{friston2012active}. Beyond its theoretical grounding, the framework has found applications in diverse fields, such as signal processing in hearing aids \citep{podusenko2022aida} and machine learning \citep{millidge2021applications}. The salient point in introducing these wide-ranging derivations and applications is to emphasise that no single perspective - be it biological, computational, or cognitive - can fully encompass the framework.
 
 \
 
-Active inference was first introduced as a corollary to the free energy principle for the brain. \citep{friston2006free} While this places active inference on a strong foundation within theoretical neuroscience - it can cause confusion as to how the framework can simultaneously be used in signal processing, for example. This report will take a slightly different approach to introducing the framework, rather than deriving it from its initial foundation, we will present an informal intuitive definition for the framework. We will then show that from completely different starting points we are able to arrive at adaptive systems that are conducting active inference. We will call these starting points and the derivations thereafter the ``high road'' and ``low road'' to active inference. This approach was inspired by \citet{parr2022ActiveInference} but differs in the exactly derivations that are done on each road. 
+The difficulty, therefore, for any introduction to the framework is how to do justice to these many perspectives. We have already stated that active inference seeks to characterise adaptive behaviour as surprise minimisation, a description that may seem unusual compared to more conventional definitions. Typically, active inference is defined as the selective sampling of sensory observations in order to minimise \textit{free energy}. Ultimately, these two definitions are equivalent, but the former is chosen in this report to ground the discussion in more familiar language. Although the physiological experience of ``surprise'' does not exactly match its statistical or physical meaning, it helps provide an intuitive understanding of how this framework ties together diverse behaviours under a unified principle. The challenge we face, then, is: how can we characterise both simple biological systems, like cells, and complex systems, like the human brain, as engaging in the same underlying processes? This is the ultimately what the first part of this report aims to motivate through what \citet{parr2022ActiveInference} call the ``low road'' and ``high road'' to active inference. 
 
 \
 
-If we assume a system's persistence over an appreciable amount of time, there are already fundamental components that we have assumed to be in place. One of them being some boundary between the system and its environment - this if formalised by the notion of a Markov blanket. Equipped with a Markov blanket a system implicitly creates some probabilistic representation of its environment, or external states in the language of Markov blankets. However, a system cannot simply mimic the dynamics of its environment otherwise it will dissipate  into the dynamics of the environment and cease to exist as system that is separated from its environment. This can be thought of as a system's resistance to the second law of thermodynamics. We can formalise this resistance by considering the sensory observations and the biological system as a random dynamical system. Using this theory we will be able to derive exactly what it means for a system to be ``active'' or persist through time. Through this alone we will be able to motivate a system performing active inference.
+Along the high road,''we take the minimal assumption that a biological system persists through time. Even with this simple premise, we are committed to some fundamental concepts, such as the idea that the system is distinct from its environment. This distinction is formalized by the notion of a Markov blanket—a boundary that separates the system's internal states from external states. Equipped with a Markov blanket, a system implicitly creates a probabilistic representation of its environment (referred to as external states). However, a system cannot simply replicate the dynamics of its environment without eventually dissipating into it. This is where the system’s ``resistance''to the second law of thermodynamics comes into play: a system must actively maintain its integrity to avoid entropy and disorder. We can formalize this resistance by modeling the sensory observations and the biological system as a random dynamical system. Through this lens, we will derive what it means for a system to be ``active''or persist over time, thereby motivating the system's engagement in active inference.
 
 \
 
-% TODO: We will be able to build on this stuff when we have completed these sections
-
-Complementary to the high road, we will consider the low road to active inference. This path will start from understanding of the brain as a predictive machine. With Helmholtzian theories of perception as ``unconscious inference'' \citep{helmholtz1867concerning} as well as modern incarnation of this thesis - the Bayesian brain hypothesis \citep{doya2007bayesian}. By incorporating another fundamental cognitive function of planning we will again arrive at active inference.
+Complementary to the high road, we will explore the ``low road''to active inference. This path begins by understanding the brain as a predictive machine, grounded in Helmholtz's theory of perception as ``unconscious inference''\citep{helmholtz1867concerning} and its modern interpretation in the Bayesian brain hypothesis \citep{doya2007bayesian}. We will consider how these theories extend beyond perception to include the sensorimotor system, showing how prediction and inference operate in action. Additionally, we will explore how the integration of bottom-up sensory input and top-down cognitive processes in perception ties into recent studies of neural activity, particularly in visual processing. These theories introduce us to the notion of a generative model of the environment. This generative model allows the brain to perform inference which again will allow us to motivate the brain engaging in active inference.
 
 \
 
-So far, I have claimed that these approaches will lead to active inference, but I have not actually states what we mean then we say active inference. This is on purpose as the current discussion should prompt the reader to consider what could tie theories about the perception and planning in the brain to a biological system's persistence over time. Fundamentally, we claim that a system that is conducting active inference is one in which its behaviour can be characterised as minimising the surprise \footnote{Surprise has a formal meaning in information theory, but for the time being this can be understood by our notion of surprise that being something happens that was not expected} of the observations it receives. Minimising surprise can be by changing our beliefs to better reflect the world, as well as changing the world to better suit our beliefs, which is the active part of active inference. Planning how to change the world or how to change our beliefs is cast as an inference problem within the framework - which is the inference part.
+The ideas surrounding active inference that we have discussed so far are not immediately useful from an empirical perspective. The hypotheses themselves are not, by their nature, \textit{falsifiable}. However, how active inference and the Free Energy Principle may manifest in organisms or the brain is a more testable proposition. In this report, we will present two prominent \textit{process theories} that have been developed to explore this manifestation. The first of these is \textit{predictive coding}.
 
 \
 
-The goal for the first part of this report is to show that the high road and low road both lead to this behaviour in the systems they are describing - that being the biological system and a brain. This should give the reader an appreciation for the generality of the claims of active inference. However, even equipped with this appreciation we will demonstrate that the active inference framework can be used in real world applications - which in this case will be creating an active inference model for a control task. That is what the second part of this report will be focused on.
+Predictive coding is a theory of cortical function that proposes the brain is composed of a hierarchy of neural activity, wherein higher levels predict the activity of the lower levels. The brain’s main objective, according to this theory, is to minimise prediction errors between the levels. This objective is consistent with the minimisation of surprise and, by extension, with active inference. However, classical predictive coding models often deal with static sensory stimuli, which are assumed to be independent. In contrast, real-world sensory inputs are highly correlated over time. This limitation is addressed by a more recent extension of the theory known as \textit{temporal predictive coding}. Fundamentally, temporal predictive coding incorporates the dimension of time into the model, enabling it to deal with the problem of correlated stimuli.
 
 \
 
-In the second half, we will use a theory that will be introduced in the low road to active inference, \textit{predictive coding}, as a basis for an active inference agent. Predictive coding is a theory of cortical function that proposed the brain's is made up of a hierarchy of neural activity that aims to predict the activity in the level below it, and that the main objective of the brain is to minimise the these prediction errors. The objective of minimisation of prediction errors is consistent with the objective of surprise minimisation, and therefore with active inference. However, predictive coding models generally deal with static sensory stimuli that is assumed to be independent and identically distributed (i.i.d). This is not true of real world stimuli that is high correlated. This issue is considered by a modern extension of predictive coding called \textit{temporal predictive coding}. Fundamentally, this model aims to solve the problem of correlated sensory stimuli by incorporating time into the predictive coding model. 
+Temporal predictive coding provides us with a formal algorithm for perception and learning within our agent. However, planning—a crucial component of active inference—is not included in this model. To address this, we will extend the temporal predictive coding model by incorporating corollaries and components from the active inference framework.
 
 \
 
-Temporal predictive coding provides us with a formal algorithm for perception and learning within our agent. However, the inclusion of planning is not a component of this predictive coding model. We will therefore be extending the model to incorporate planning by using corollaries and components of active inference. 
+Our agent and model will be built by considering different cortical functions such as perception, learning, and planning. For each of these, we will define analogous algorithms within our model that connect the statistical inference to cognitive functions. To demonstrate these ideas, we will develop an agent within the \textit{adaptive Bayesian thermostat} environment. This environment, introduced by \citet{buckley2017free}, involves a simple task: the agent must infer its distance from a heat source based on noisy temperature readings. The agent is equipped with a preferred temperature, which it incorporates into its planning to decide on its actions.
 
 \
 
-Our agent and model will be build out by considering different cortical functions of perception, learning and planning. For each of these, we will define analogous algorithms within our model that ties the statistical inference we will be doing to some cognitive function. To demonstrate each of these we will be adding to an agent within the \textit{adaptive Bayesian thermostat} environment. This environment was introduced in \citet{buckley2017free} and involves a simple task of an agent needing to infer their distance to a heat source from noisy temperature readings. The agent is also equipped with a preferred temperature which it will incorporate into its planning to decide which action to take.
+The adaptive Bayesian thermostat is a simple environment designed to demonstrate the core components of predictive coding and active inference. In addition, we will test the temporal predictive coding model in the CartPole environment from the \textit{OpenAI Gymnasium} package \citep{towers2024gymnasium}. This environment, a classic control problem in the reinforcement learning literature, involves balancing a pole on a cart. Several modifications were made to the environment, including shifting it from a Markov Decision Process (MDP) to a Partially Observable MDP (POMDP), and defining a preference distribution over the agent's observations. We present the results of the model’s performance in this task, along with a discussion.
 
 \
 
-The adaptive Bayesian thermostat is a simple environment and is aimed to demonstrate the components of predictive coding and active inference. We will be testing the temporal predictive coding model in the Cart Pole environment the \textit{OpenAI Gymnasium} package \citep{towers2024gymnasium}. This environment is defined for an agent to balance a pole of the back of a cart, which has become a baseline control problem with the reinforcement learning literature. There are a few modifications that were made to this environment including changing it from Markov Decision Processes (MDP) to a Partially Observable MDP, and defining a preference distribution over the observations from the environment. We present the results of the performance of the model along with a discussion.
+Additionally, we will demonstrate how active inference theories manifest in \textit{message passing} on a factor graph. Message passing has deep roots in theories of cortical computation \citep{parr2019neuronal}, and it is also foundational to many efficient Bayesian inference algorithms. One such algorithm we will implement is \textit{belief propagation}. This model will be tested in another reinforcement learning baseline, the Mountain Car environment.
 
 \
 
-By applying this framework to a control problem and providing a formal introduction, we aim to give the reader a clear understanding of the rich normative theory underlying active inference, as well as an appreciation for its diverse range of practical applications.
+By applying this framework to control problems and providing a formal introduction to the underlying theories, we aim to offer the reader both a clear understanding of the rich normative theory behind active inference and an appreciation for its wide-ranging practical applications.
 
 \section{Review of Related Work}
 
@@ -199,7 +217,7 @@ The key point is that internal and external states are formally related across t
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=0.4]{images/blanket_prob_relation.png}
-    \caption{Example of how two random variables $x$ and $\mu$, both conditioned on the blanket state $b$ can impose some probabilistic representation of the other.}
+    \caption{Example of how two random variables $x$ and $\mu$, both conditioned on the blanket state $b$ can impose some probabilistic representation of the other. \textbf{Left}: Depicts the data generated from $\mu|b$. \textbf{Middle}: Shows the data generated from $x|b$. \textbf{Right}: Depicts how these variables have a synchrony based on being conditioned on the same blanket states. The line depicted is the result of linear regression on $\mu$ using variable $x$.}
     \label{fig:markov_blanket_prob_relation}
 \end{figure}
 
@@ -208,8 +226,6 @@ From a Bayesian perspective, the dynamics of the internal states correspond to a
 
 
 \subsubsection{Random dynamical system}
-
-%TODO: Need to read way more about this to understand the formalism
 
 While noting that this Markov blanket is indeed necessary for a biological system's persistence over time - the question that we posed initially is what must a system be \textbf{doing} to ensure its persistence over time. Our hypothesis for this was the system was required to keep certain internal parameters within small viable bounds. We can formalise this by describing the system and the sensory states as a random dynamical system. 
 
@@ -245,7 +261,7 @@ In this set up, internal states have dynamics that depend on external states and
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=0.5]{images/random_dynamical_system.png}
-    \caption{Image from \citet{friston2012free} depicting the component of described random dynamical system.}
+    \caption{Image from \citet{friston2012free} depicting the component of described random dynamical system. The nodes denote spaces and subsets, while lines depicts mappings with their arrows denoting the direction of influence.}
     \label{fig:random_dynamical_system}
 \end{figure}
 
@@ -531,7 +547,7 @@ However, this does not imply that we cannot further lower the negative log evide
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=0.55]{images/vfe_minimisation.png}
-    \caption{Image from \citet{parr2022ActiveInference} depicting the interplay between a perception being a process of inference to change beliefs to better reflect the environment, and action as a process to generate observations that better reflect the system's beliefs.}
+    \caption{Image from \citet{parr2022ActiveInference} depicting the interplay between a perception being a process of inference to change beliefs to better reflect the environment, and action as a process to generate observations that better reflect the system's beliefs. In this context, an observations that better suits the beliefs of the model is one with a lower free energy.}
     \label{fig:vfe_minimisation}
 \end{figure}
 
@@ -867,7 +883,7 @@ Suppose the agent's prior belief of its distance to the heat source, $\bar{\mu}$
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=0.55]{images/pc_example_perception.png}
-    \caption{Left: Plot of the the values of VFE during gradient descent. Each value plotted corresponds to the value of $\phi$ used in the calculation of the VFE. Right: After convergence of the $\phi$ we then use the parameter as the mean of our prior term in the generative model. This plot shows the difference between the prior distribution, the variational posterior and the true Bayesian posterior distribution. Important to note is that we are only performing gradient descent on the $\phi$ and simply keeping the variance of the prior distribution constant after convergence.}
+    \caption{\textbf{Left}: Plot of the the values of VFE during gradient descent. Each value plotted corresponds to the value of $\phi$ used in the calculation of the VFE. \textbf{Right}: After convergence of the $\phi$ we then use the parameter as the mean of our prior term in the generative model. This plot shows the difference between the prior distribution, the variational posterior and the true Bayesian posterior distribution. Important to note is that we are only performing gradient descent on the $\phi$ and simply keeping the variance of the prior distribution constant after convergence.}
     \label{fig:pc_example_perception}
 \end{figure}
 
@@ -1000,7 +1016,7 @@ We have kept prior knowledge of distance consistent with prior sections, but we 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.5]{images/pc_example_planning.png}
-	\caption{Results of a predictive coding agent equipped with planning using EFE in the Bayesian Thermostat environment. \textbf{Left}: This depicts the difference between the agents belief of its distance to the heat source compared to the true distance it is from the heat source. We observe that the agent is consistently estimating its distance to be greater than the true distance. \textbf{Middle}: This is a plot of the observations (temperature readings) observed by the agent over the episode. We notice that even though the agent did not have an accurate sense of where they were in the environment, they were able to consistently receive preferable observations. This is due to the fact that the dilution of the agent's own distance was offset by a weaker synaptic which in combination meant the agent converged to a reasonable niche within the environment. \textbf{Right}: This is a plot of the variational free energy after inference and learning in each time-step.}
+	\caption{Results of a predictive coding agent equipped with planning using EFE in the Bayesian Thermostat environment. \textbf{Left}: This depicts the difference between the agents belief of its distance to the heat source compared to the true distance it is from the heat source. We observe that the agent is consistently estimating its distance to be greater than the true distance. \textbf{Middle}: This is a plot of the observations (temperature readings) observed by the agent over the episode. We notice that even though the agent did not have an accurate sense of where they were in the environment, they were able to consistently receive preferable observations. This is due to the fact that the dilution of the agent's own distance was offset by a weaker synaptic which in combination meant the agent converged to a reasonable niche within the environment. \textbf{Right}: This is a plot of the variational free energy after inference and learning at each time-step.}
 	\label{fig:pc_example_planning}
 \end{figure}
 
@@ -1057,7 +1073,7 @@ The variational free energy can thus be written as the sum of prediction errors 
 \mathcal{F} = \prod_{l = l}^{L} \Sigma_l^{-1} \epsilon_l^2 + \ln 2 \pi \Sigma_l
 \end{equation}
 
-Where $\epsilon_l = \phi_l - f_l(\theta_{l + 1}, \phi_{l + 1})$\footnote{Which is subtly different to the error in the previous section. This is simply notional, and is due to the difference between $\Sigma$ being the co-variance matrix while $\sigma$ is standard deviation.}
+Where $\epsilon_l = \phi_l - f_l(\phi_{l + 1}; \theta_{l + 1})$\footnote{Which is subtly different to the error in the previous section. This is simply notional, and is due to the difference between $\Sigma$ being the co-variance matrix while $\sigma$ is standard deviation.}
 
 \
 
@@ -1065,8 +1081,8 @@ Since the free energy can be nicely divided into sum of layer-wise prediction er
 
 \begin{equation}
 	\begin{aligned}
-		\frac{d\phi_l}{dt} &= - \frac{\partial \mathcal{F}}{d\phi_l} = \Sigma_{l - 1}^{- 1} \epsilon_{l - 1} \frac{\partial f_{l - 1}}{\partial \phi_{l}} \theta_l^T - \Sigma_{l}^{-1} \epsilon_l \\
-		\frac{d\theta_l}{dt} &= - \frac{\partial \mathcal{F}}{d\theta_l} = \Sigma_{l - 1}^{- 1} \epsilon_{l - 1} \frac{\partial f_{l - 1}}{\partial \theta_{l}} \phi_l
+		\frac{d\phi_l}{dt} &= - \frac{\partial \mathcal{F}}{d\phi_l} = \Sigma_{l - 1}^{- 1} \epsilon_{l - 1} \frac{\partial f_{l - 1}(\phi_{l}; \theta_{l})}{\partial \phi_{l}} - \Sigma_{l}^{-1} \epsilon_l \\
+		\frac{d\theta_l}{dt} &= - \frac{\partial \mathcal{F}}{d\theta_l} = \Sigma_{l - 1}^{- 1} \epsilon_{l - 1} \frac{\partial f_{l - 1}(\phi_{l}; \theta_{l})}{\partial \theta_{l}}
 	\end{aligned}
 \end{equation}
 
@@ -1143,7 +1159,7 @@ From the graphical model of the HMM we can write out specific equations for the 
 	\end{aligned}
 \end{equation}
 
-The $A$ matrix which we will call the `transition' matrix - encodes how the hidden states are expected to change from one time-step to the next. The $B$  encodes the effect of actions $u$ on the hidden states, which is called the `control' matrix. Finally the $C$ is the `emission' matrix translating the underlying state to observations. While $\omega_x, \omega_y$ are Gaussian noise. We can now translate this state-space representation into our tPC generative model:
+The $A$ matrix which we will call the `transition' matrix - encodes how the hidden states are expected to change from one time-step to the next. The $B$  encodes the effect of actions $u$ on the hidden states, which is called the `control' matrix. Finally the $C$ is the `emission' matrix translating the underlying state to observations\footnote{This is not the preference over observations that is traditionally also defined using `C' in active inference.}. While $\omega_x, \omega_y$ are Gaussian noise. We can now translate this state-space representation into our tPC generative model:
 
 \begin{equation}
 \begin{aligned}
@@ -1152,15 +1168,19 @@ The $A$ matrix which we will call the `transition' matrix - encodes how the hidd
 \end{aligned}
 \end{equation}
 
-The form of this generative model maps closely to the state-space representation. The only additional component that has been added is a bias term in the emission structure of the model, $c$. This term is not used in the original paper by \citet{millidge2024temporal}. Since this model was only used in filtering tasks scaling the output was not necessary. However, in our case, we will be using this model in a control task which does require the predicted output to be scaled to minimise the prediction error. Which from what we have seen in the previous section is very closely linked to the variational free energy which we are ultimately aiming to minimise in each observation. A bias term such as this is not needed in the temporal transition component of the model. This is due to the fact that the hidden states are not strictly trying to represent something physical. So the model will compute values that are valuable only within the context of the model, and therefore they do not need to be scaled to fit any data.
+The structure of this generative model closely mirrors a typical state-space representation. The key addition is a bias term, $c$, in the emission model. This term was not included in the original formulation by \citet{millidge2024temporal}, where the model was used exclusively for filtering tasks. In those cases, scaling the output was unnecessary. However, since we are applying this model to a control task, it becomes essential to scale the predicted output to minimise the prediction error. As discussed in the previous section, minimising prediction error is closely tied to minimising variational free energy, which remains our ultimate goal with each observation.
 
 \
 
-The other component of the model is the form of the activation function $f$. This function was chosen to be the sigmoid function, which is standard within the machine learning community. 
+It is important to note that a bias term is not required in the temporal transition component of the model. This is because the hidden states in our model do not need to represent physical quantities directly. Instead, they are free to evolve in a way that is internally consistent within the model. As such, there is no need to scale them to fit external data, allowing them to serve purely as latent variables that facilitate the model's performance.
 
 \
 
-We will be assuming the Dirac-delta distribution as our variational posterior distribution, $q(x - \phi)$. We can then define the variational free energy objective:
+The second key component of the model is the activation function, $f$. In this case, we have chosen the sigmoid function. While the sigmoid does not have strong biological roots, other similar functions, such as the softmax, exhibit greater biophysical plausibility. Specifically, functions like the softmax reflect the dynamics of spiking neuron populations, where synaptic input is converted into neuronal firing rates in a manner consistent with observed biological processes \citep{deco2008brain}.
+
+\
+
+We will be assuming the Dirac-delta distribution as our variational posterior distribution, $q= \delta(x - \phi)$. We can then define the variational free energy objective:
 
 \begin{equation}
     \begin{aligned}
@@ -1234,15 +1254,18 @@ Furthermore, while the default environment assigns a reward at each time step, w
     \label{fig:tpc_results}
 \end{figure}
 
-The experiment involved 1000 episodes across 25 separate runs. The results are shown in Figure \refp{fig:tpc_results}. The plot on the left, which illustrates the number of steps the agent managed to balance the pole, shows a significant improvement after around 250 episodes, with the agent maintaining balance for over 120 time steps. This shows a non-trivial level of learning in this task. The baseline control rule, which is simply if the pole leans move left, is able to achieve an average of 50 time units \citep{millidge2019combining}. We can also notice a very clear correlation between the average variational free energy, depicted on the right, and the performance in the task. When the model is able to reduce the variational free energy of the observation, it is able to improve its performance. While, we notice that when the VFE converges to almost zero - the performance too plateaus. 
+The experiment involved 1000 episodes across 25 separate runs, with the results are shown in Figure \refp{fig:tpc_results}. he plot on the left, which illustrates the number of time steps the agent was able to balance the pole, demonstrates significant improvement after around 250 episodes, with the agent eventually maintaining balance for over 120 time steps. This indicates a non-trivial level of learning in this task. For reference, a simple baseline control rule—where the agent moves left if the pole leans—achieves an average of 50 time steps \citep{millidge2019combining}. Additionally, a clear correlation is observable between the average variational free energy (VFE), depicted on the right, and task performance. When the model successfully reduces VFE, performance improves. Interestingly, once VFE converges near zero, performance also plateaus.
 
 \
 
-Further, the variance of the tPC model in its balance is very noisy. In particular runs the model was able to balance the pole for 500 time units (the maximum) while the next run it could drop back down to a balance of 50 units. In order to reduce the variance of this model we exponentially decayed the learning rate parameter $\eta$. While this did assist in the agent consistently achieving better results through the episode, it was unable to reduce the episode to episode variance. 
+The variance in the tPC model's balance performance remains noisy, however. In some runs, the agent successfully balanced the pole for up to 500 time steps (the maximum), while in others, it dropped back to around 50 time steps. To address this, we applied exponential decay to the learning rate parameter $\eta$. While this adjustment helped the agent achieve better average performance across episodes, it did not significantly reduce the episode-to-episode variance.
+\
+
+A natural question arises: how well is the agent learning the dynamics of the environment? VFE provides some insight, as it acts as an upper bound on the agent's surprise given the observation, but prediction error offers a more precise measure. If the agent is in a particular state and selects an action, part of its decision-making process involves projecting itself one step into the future—a process discussed in the previous section. We can therefore compare the accuracy of these predictions by calculating the norm of the predicted observation (from the counterfactual process in the expected free energy calculation) against the actual observation. These results, shown in Figure \ref{fig:tpc_pred_error}, reveal that prediction errors are closely correlated with VFE, as expected. However, the model does not converge to zero prediction error, indicating it cannot fully model the environment’s dynamics.
 
 \
 
-The natural question to ask is how well is the agent learning the dynamics of the environment. VFE is closely associated with this since as we have seen this is an upper bound on the surprise of the observation. But we are able to measure this more exactly using simply prediction error. If an agent is in a particular state and they choose to execute a certain action, part of that action selection process was to cast itself one step into the future. A process highlighted in the previous section. We can therefore compare how accurate this forecasting is. We did this by computing the norm of the predicted observation from the counterfactual process within the computation of the EFE, against the actual observation. These results are depicted in Figure \ref{fig:tpc_pred_error}. We observe that the prediction errors are clearly correlated with the variational free energy, which is of course expected, but what is interesting is that the model is unable to converge to zero prediction error. Meaning that it cannot fully model the dynamics of the environment. This is not unexpected since the dynamics of the cart-pole environment are fully modelled using a second-order dynamical system \citep{florian2005CorrectEF} which is difficult for a single layer network, even equipped with a with a non-linear activation function. 
+This result is not unexpected. The cart-pole environment’s dynamics are governed by a second-order system \citep{florian2005CorrectEF}, which poses a challenge for a single-layer network, even with a non-linear activation function.
 
 \begin{figure}[htbp]
     \centering
@@ -1258,22 +1281,24 @@ The natural question to ask is how well is the agent learning the dynamics of th
 
 \
 
-As mentioned in the previous section, we cannot directly compare the results of this experiment with other cart-pole algorithms since the objective used in this model is a far more dense reward space. Nevertheless, \citet{millidge2024temporal} similarly used the observations from the environment to define the preference distribution for their active inference agent. Their model consisted of a hierarchical predictive coding model in the fully observable version of Cart-Pole. They were able to achieve an average of slightly less than 100 units across 50 trials.
-
-%TODO: Compare these two models
+As mentioned in the previous section, we cannot directly compare the results of this experiment with other cart-pole algorithms, as the objective used in this model involves a far denser reward space. Nonetheless, \citet{millidge2024temporal} similarly used observations from the environment to define the preference distribution for their active inference agent. Their model, which employed a hierarchical predictive coding framework in a fully observable version of Cart-Pole, achieved an average of slightly less than 100 time steps across 50 trials.
 
 \
 
-An important point to note in this model is its sensitivity to initial conditions, particularly to the weight initialisation in the varies matrices. In some instances, a bad weight initialisation causes no learning across the 1000 episodes resulting in an average balancing steps of 9. Thus in our experiments we fixed the randomisation seed for weights across all runs. This problem is not indicative of a model that is unable to scale to more complex tasks, we note that deep neural networks suffer from a similar weight initialisation problem \citep{mishkin2016needgoodinit}. 
+A key factor in the performance of this model is its sensitivity to initial conditions, particularly the weight initialisation in the various matrices. In some instances, poor weight initialisation resulted in no learning across the 1000 episodes, with the agent balancing the pole for an average of only 9 time steps. To address this issue, we fixed the randomisation seed for weight initialisation across all runs in our experiments. It is important to note that this sensitivity to initialisation is not unique to this model and does not indicate an inability to scale to more complex tasks. Even deep neural networks suffer from similar weight initialisation challenges \citep{mishkin2016needgoodinit}.
 
+\ 
+
+The dimension of the latent space also enters into the model as a hyperparameter. The hidden state in this model as not necessarily aiming to represent anything specific about the environment. We observed the best performance for our model with a dimension of between $6$ and $8$. 
 
 \subsection{Message Passing}
 
-Predictive coding presents itself as a neural process theory. Meaning it is presenting a mechanistic explanation of cognitive functions and their neuronal underpinnings. However, for the processes of building active inference models\footnote{Active inference is also a process theory} predictive coding can be viewed as a variational inference algorithm for performing approximate Bayesian inference. Predictive coding is not unique in this respect, there are many such statistical inference algorithms that have been postulated to have a connection to neurobiology, one of them being \textit{message passing}.
+Predictive coding is often presented as a neural process theory, offering a mechanistic explanation of cognitive functions and their neuronal underpinnings. However, when constructing active inference models, predictive coding can also be understood as a variational inference algorithm for performing approximate Bayesian inference. Predictive coding is not unique in this role - many statistical inference algorithms have been suggested to have neurobiological relevance, one of which is \textit{message passing}.
 
 \
 
-In this report, we will be reviewing and implementing a message passing algorithm called \textit{belief propagation}. Belief propagation allows exact computation of marginal posteriors at the expense of the architectural simplicity of other message passing algorithms. (Eg. variational message passing) We will be focussing on message passing on Forney-style factor graphs (FFG), also called normal factor graphs. FFG present a graphical description of the relation between variables and factors within a joint probability distribution. Expressing a joint probability distribution as an FFG we will be able to derive message that are passed from nodes on the graph that allow us to perform efficient and exact Bayesian inference. (On graphs with no loops)
+In this report, we will review and implement a specific message passing algorithm called \textit{belief propagation}. Belief propagation allows for the exact computation of marginal posteriors, though this precision comes at the cost of greater architectural complexity compared to simpler algorithms such as variational message passing. Our focus will be on message passing over Forney-style factor graphs (FFG), also known as normal factor graphs. These graphs provide a clear graphical representation of the relationships between variables and factors within a joint probability distribution. By expressing a joint probability distribution in the form of an FFG, we can derive messages passed between nodes on the graph, enabling efficient and exact Bayesian inference—provided that the graph has no loops.
+
 
 \subsubsection{Forney-style Factor Graphs and Belief Propagation}
 
@@ -1326,15 +1351,12 @@ The key point is that not all factors (functions) depend on every variable, whic
 \end{aligned}
 \end{equation}
 
-%TODO: I think I can phrase this better
 $\mu$ is what we call a message. In the FFG we will be exploring the factors, $f$, will also be probability distributions. This means that these messages can just be considered as unnormalised probability distributions - otherwise known as beliefs. Passing these messages around the factor graph is what gives rise to the notion of belief propagation.
 
 
 \paragraph{Remark} The point that has not yet been address is the normalisation of these messages in order to form a valid probability distribution. This normalisation only requires the evaluation of low-dimensional integrals over local variables which makes it a more tractable computation. What is more, if all messages are Gaussian and any other node function is linear. The integrable has a closed form. \citep{bagaev2021reactive}
 
-%TODO: I think I need to mention this - it might make more sense in the predictive coding section
-
-\paragraph{Remark} This leads us to an important distinction between the falsifiable nature of the present argument. There appears to be done contradiction between the notion that we cannot perform Bayesian inference on large models because we cannot marginalise but we have just claimed that we can. This is because we are proposing a neural implementation that can be proved incorrect.
+\paragraph{Relation to Free Energy} As we have discussed in pervious sections, the Bayesian posterior is optimal with respect the variational free energy and therefore surprise. What is interesting to note is that belief propagation and variational message passing \citep{winn2005variational} can both be framed as VFE minimisation augmented with the Bethe factorisation assumption. \citep{yedida2005constructing} Which gives message passing algorithms that can incorporate both the computational benefits of variational message passing and belief propagation. \citep{bagaev2021reactive} 
 
 \paragraph{Equality Factor} Within a FFG we depict a variable as an edge connecting two factors. As opposed to a bipartite graph where they are depicted as nodes with edges corresponding to the relationship between variables and factors. This introduces a constraint that a variable can only be a function of two factors. We resolve this constraint by an equality factor. The equality factor resolves this situation by constraining the information about three variables to be equal. 	\citep{cox2019factor} More precisely:
 
@@ -1433,9 +1455,7 @@ The Forney-factor graph for this generative model can be seen in Figure \ref{fig
 \end{aligned}	
 \end{equation}
 
-The component we have neglected to mention above is the preference distribution, within this model this component takes on a slightly different form. The model initialises the preference distribution as vague for the first $T$ time-steps. After which it is restricted to a concentrated distribution around the goal observation:
-
-% TODO: Mention that there is not really any hidden states - MDP
+The component we have neglected to mention above is the preference distribution. The model initialises the preference distribution as vague for the first $T$ time-steps. After which it is restricted to a concentrated distribution around the goal observation:
 
 \begin{equation}
 	\tilde{p}(y_k) = \left\{
@@ -1446,7 +1466,7 @@ The component we have neglected to mention above is the preference distribution,
 	\right.
 \end{equation}
 
-The algorithm for this model involves three steps each time-step:
+The algorithm for each time-step using this model can be summarised as comprising of three distinct steps:
 
 \paragraph{1. Act-Execute-Observce} - We first select the \textbf{mean} of the marginal distribution over the controls, $u_k$. We then execute this actions on the environment and observe the new observations generated from the environment, $y_k$.
 
@@ -1473,7 +1493,7 @@ Upon inspection we can see that the new prior is nothing but the message coming 
 
 \begin{figure}[h]
     \centering
-\begin{tikzpicture}[auto, node distance=1cm, >=latex]
+\begin{tikzpicture}[auto, node distance=0.75cm, >=latex]
 
     % Nodes
     \node (dots) {$\cdots$}; % Three dots
@@ -1510,10 +1530,12 @@ Upon inspection we can see that the new prior is nothing but the message coming 
 
 All results in this environment were computed using the a package for Bayesian inference using message passing called RxInfer.jl \citep{bagaev2023rxinfer}. 
 
+\
+
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=0.55]{images/mountain_car_results.png}
-    \caption{Results from 100 time steps of the active inference agent experiment in the Mountain Car Environment. \textbf{Left}: This is a plot of the observations over the 100 time-steps. We see that the agent is able to reach the goal of a height of 0.75. \textbf{Right}: This is a plot of the force exerted by the agent over the course of the experiment. We observe that indeed the agent is able to move backwards to gain enough potential energy to reach its target height. }
+    \includegraphics[scale=0.5]{images/mountain_car_results.png}
+    \caption{Results from 100 time steps of the active inference agent experiment in the Mountain Car Environment. \textbf{Left}: This is a plot of the observations over the 100 time-steps. We see that the agent is able to reach the goal of a height of 0.75. \textbf{Right}: This is a plot of the Free Energy of each observation over the duration of the episode. \textbf{Bottom}: This is a plot of the force exerted by the agent over the course of the experiment. We observe that indeed the agent is able to move backwards to gain enough potential energy to reach its target height.}
     \label{fig:mountain_car_results}
 \end{figure}
 
@@ -1527,8 +1549,23 @@ Some degree of exploration is clearly necessary within the environment. If the a
 
 In theory, active inference provides an implicit solution to the exploration vs. exploitation dilemma. However, the current model does not compute actions based on the expected free energy (EFE) of each action; instead, actions are sampled from the mean of the marginal distribution. Modifying the model to incorporate this implicit exploration-exploitation tradeoff would be an intriguing direction for further research.
 
+\clearpage
 
 \section{Conclusion}
+
+In this report, we introduced active inference from two distinct conceptual foundations: what we have referred to as the ``low road'' and ``high road'' to active inference. This distinction was made to highlight that active inference, as a broad and far-reaching framework, can be challenging to approach from a single perspective. By splitting the discussion, we aimed to show that there are multiple ways to begin thinking about and implementing active inference. The framework can be approached from the broad perspective of a persistent biological system, or from a more focused, lower-level view grounded in theories of inference within the brain. Although these approaches differ in their assumptions and fields of application, they can ultimately be seen as performing the same core process of active inference.
+
+\
+
+While understanding the conceptual foundations of active inference is crucial, it is equally important to put the theory into practice by implementing some of the core principles of active inference into models that can solve control and planning problems. We demonstrated that a simple predictive coding generative model of perception, learning, and planning was able to solve a control task in the form of the adaptive Bayesian thermostat. In this environment, the agent successfully inferred its distance from a heat source by observing noisy temperature readings and planned actions by leveraging Expected Free Energy (EFE) to achieve its preferred temperature. Similarly, we showed that a temporal predictive coding model, which accounts for correlations in observations over time, could solve the classic CartPole balancing task. By predicting future states based on past observations, the model was able to plan and execute actions that maintained the pole's balance.
+
+\
+
+Additionally, we demonstrated the effectiveness of belief propagation on a factor graph in the Mountain Car environment. Using biologically plausible message-passing algorithms, the agent successfully planned and executed actions to reverse the car and build enough potential energy to reach the goal state at the top of the mountain. This was achieved by propagating beliefs about the state of the environment and the agent's actions through time, thereby solving a classic control problem in a biologically-inspired way.
+
+\
+
+Though the problems we tackled are relatively simple and there are faster, more efficient algorithms for solving them, the point of these applications was not computational efficiency. Rather, the purpose was to show that we can apply grounded, mathematically rigorous theories like active inference to solve these problems using biologically plausible models. These models, despite their simplicity, illustrate the power and versatility of active inference as a framework for perception, learning, and action in uncertain environments.
 
 \newpage
 
@@ -1541,8 +1578,113 @@ In theory, active inference provides an implicit solution to the exploration vs.
 
 \section{Hyperparameters}\label{appendix:hyperparameters}
 
-\section{Gaussian Derivation}\label{appendix:laplace_approx}
+\subsection{Predictive Coding}
 
+\begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
+ \hline
+ \multicolumn{4}{|c|}{Predictive Coding} \\
+ \hline
+ Parameter & Perception & Learning & Action\\
+ \hline
+ Inference Iterations	   				& 10 & 10 & 10	\\
+ Prior ($\bar{\mu}$) 					& 4  & 4  & 9	\\
+ Observation ($y$)						& 2 	 & 2  & N/A \\
+ Observation Variance ($\sigma^2_y$)		& 1/4  & 1/4  & 1/2	\\
+ Hidden variance ($\sigma^2_x$)			& 1/4  & 1/4  & 1/2	\\
+ Initial synaptic weight ($\theta$)		& N/A  & -0.75  & -0.8	\\
+ Learning rate ($\eta$)					& N/A  & 0.01  & 0.01	\\
+ Biased Mean ($\tilde{\mu}$)				& N/A  & N/A  & 4	\\
+ \hline
+\end{tabular}
+
+\
+
+\begin{table}[h!]
+    \centering
+    \label{tab:config_table}
+    \begin{tabular}{ |p{5cm}||p{5cm}| }
+        \hline
+        \multicolumn{2}{|c|}{Temporal Predictive Coding} \\
+        \hline
+        \textbf{Parameter} & \textbf{Value} \\
+        \hline
+        Number of Episodes & 1000 \\
+        Inference Iterations& 25 \\
+        Learning Rate Start ($\eta$\_start)  & 0.2 \\
+        Learning Rate Minimum ($\eta$\_min)  & 0.025 \\
+        Learning Rate Decay ($\eta$\_decay)  & 0.999 \\
+        Step-size ($\tau$)  & 0.2 \\
+        Activation Function (activation) & sigmoid \\
+        Numpy Seed (numpy\_seed)        & 2024 \\
+        Latent Dimension (latent\_dimension) & 6 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{ |p{5cm}||p{5cm}| }
+        \hline
+        \multicolumn{2}{|c|}{Message Passing} \\
+        \hline
+        \textbf{Parameter} & \textbf{Value} \\
+        \hline
+        Inference Horizon & 25 \\
+        Episode Length & 100 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\section{Predictive Coding under the Laplace Approximation}\label{appendix:laplace_approx}
+
+To derive the predictive coding algorithm we assumed the form of the variational posterior distribution to be a Dirac-delta distribution centred around $\phi$. The claim was that that derivation would give use the same result as if we had assumed that the posterior was a Gaussian under the Laplace Approximation, which is the more common approach found in the literature \citet{friston2005theory, buckley2017free}. The Laplace approximation defines the variational posterior variance of the distribution to be a function of the mean. More precisely, we define:
+
+\begin{equation}
+	q(x; \phi) = \mathcal{N}(x; \phi, \sigma^2(\phi))
+\end{equation}
+
+In this case $\sigma^2(\cdot)$ is used to denote a function of the mean that translates it to the variance, not the softmax function which was also denoted by the same letter. The goal is to show that this is the exact same form as the VFE when using the Dirac-delta distribution.
+
+
+\begin{equation*}
+	\begin{aligned}
+		\mathcal{F} &= \underbrace{\mathbb{E}_{q(x ; \phi)} \left[ 	\ln q(x ; \phi) \right]}_{\text{Negative Entropy}} - \underbrace{\mathbb{E}_{q(x ; \phi)} \left[ 	\ln p(y | x) p(x) \right]}_{\text{Energy}} \\
+		&= - \frac{1}{2} \ln 2\pi \sigma^2 - \frac{1}{2} -  \mathbb{E}_{q(x ; \phi)} \left[ 	\ln p(y | x) p(x) \right]
+	\end{aligned}
+\end{equation*}
+
+Here we have used the analytical result that the entropy of a Gaussian is $\frac{1}{2} \ln 2\pi \sigma^2 + \frac{1}{2}$. Let us now approximate the Energy term using a second order Taylor series about $x = \phi$
+
+\begin{equation}
+	\begin{aligned}
+		\mathcal{F} &\approx  - \frac{1}{2} \ln 2\pi \sigma^2 - \frac{1}{2} -  \mathbb{E}_{q(x ; \phi)} \left[ 	\ln p(y | \phi) p(\phi) \right] -  \mathbb{E}_{q(x ; \phi)} \left[ 	\frac{ \partial \ln p(y | x) p(x)}{\partial x}(x - \phi) \right] \\
+		& -  \mathbb{E}_{q(x ; \phi)} \left[ \frac{\partial^2 \ln p(y | x) p(x)}{\partial x^2}(x - \phi)^2 \right] \\
+		&=  - \frac{1}{2} \ln 2\pi \sigma^2 - \frac{1}{2} - \ln p(y | \phi) p(\phi) - \frac{\partial^2 \ln p(y | x) p(x)}{\partial x^2}\sigma^2
+	\end{aligned}
+\end{equation}
+
+We are able to drop the first order exponential in the Taylor series by using the linearity of expectation. We could take the expectation of $x$ with respect to the variational posterior which is $\phi$. So we get $\phi - \mathbb{E}_q[\phi] = \phi - \phi = 0$. As well as the fact that $\mathbb{E}_q[( x - \phi )^2] = \sigma^2$
+
+\
+
+Our aim is to now find the variance that minimises this expression of the variational free energy, we do this by taking the partial derivative with respect to $\sigma^2$ and setting it to 0.
+
+\begin{equation}
+\begin{aligned}
+	0 &= \frac{\partial \mathcal{F}}{\partial \sigma^2}	= \frac{-2}{\sigma^2} - \frac{\partial^2 \ln p(y | x) p(x)}{\partial x^2} \\
+	\sigma^2 &= \frac{\partial^2}{\partial x^2} \left[ \frac{-1}{2\ln p(y | x) p(x) } \right]
+\end{aligned}
+\end{equation}
+
+We can notice that taking the second derivative with respect to $\sigma^2$ would give us a negative function, therefore we can say that this is indeed a minima. Further, this is a fixed, analytical form for the optimal posterior as a function of $\phi$ and therefore does not need to play a role in the optimisation process with respect to the VFE. This means we can simply set $\sigma^2$ to this value and the VFE becomes:
+
+\begin{equation}
+	\mathcal{F} \propto \ln p(y | \phi) p(\phi)
+\end{equation}
+
+This results in the same update equations as the Dirac-delta derivation. 
 
 \end{document}
 

@@ -1,7 +1,6 @@
-\begin{equation}\label{eq:vfe_low_road}
+\begin{equation*}
 	\begin{aligned}
-		\mathcal{F}(q, y) &=  \int q(x; \phi) \ln \frac{q(x; \phi)}{p(x, y; \theta)} \\
-		&= - \ln p(y; \theta) + \int q(x; \phi) \ln \frac{q(x; \phi)}{p(x | y; \theta)} \\ 
-		&= - \underbrace{\ln p(y; \theta)}_{\text{Evidence}} + \underbrace{D_{KL}\left[ q(x; \phi) \,\|\, p(x | y; \theta) \right]}_{\text{Divergence}}
+		\mathcal{F} &= \underbrace{\mathbb{E}_{q(x ; \mu)} \left[ 	\ln q(x ; \phi) \right]}_{\text{Entropy}} - \underbrace{\mathbb{E}_{q(x ; \mu)} \left[ 	\ln p(y | x) p(x) \right]}_{\text{Energy}} \\
+		&= \mathbb{E}_{q(x ; \phi)} \left[ 	\ln q(x ; \phi) \right] - 2 \ln \pi \sigma(\mu)
 	\end{aligned}
-\end{equation}
+\end{equation*}
